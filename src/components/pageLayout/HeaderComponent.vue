@@ -1,4 +1,5 @@
 <script setup>
+import Button from '../ButtonComponent.vue';
 import { ref, unref, toRef, onMounted, onUnmounted } from 'vue';
 
 const navItems = ['About us', 'Services', 'Use Cases', 'Pricing', 'Blog'];
@@ -9,7 +10,7 @@ const updateSelectedNavItem = (item) => {
 
 const scrolled = ref(false);
 const checkScrollPosition = () => {
-  scrolled.value = window.pageYOffset >= 60;
+  scrolled.value = window.pageYOffset >= 30;
 };
 const isScrolled = toRef(scrolled, 'value');
 onMounted(() => {
@@ -22,7 +23,7 @@ onUnmounted(() => {
 
 <template>
   <header :class="isScrolled ? 'header header--fixed' : 'header'">
-    <img class="header__logo" src="../assets/Logo.svg" />
+    <img class="header__logo" src="../../assets/Logo.svg" />
     <nav class="header__nav">
       <ul class="nav__list">
         <li
@@ -34,22 +35,21 @@ onUnmounted(() => {
           {{ item }}
         </li>
       </ul>
-      <button class="nav__btn">Request a quote</button>
+      <Button color="white">Request a quote</Button>
     </nav>
   </header>
 </template>
 
-<style lang="scss">
-@import '../style.scss';
+<style scoped lang="scss">
+@import '../../style.scss';
 
 .header {
-  height: 80px;
+  height: 135px;
+  padding-top: 55px;
   width: 1440px;
   background-color: $bg-color;
-  margin-top: 55px;
   @include flex-row;
   justify-content: space-between;
-  font-size: 20px;
   position: fixed;
   top: 0;
   transition: all 0.3s;
@@ -66,7 +66,8 @@ onUnmounted(() => {
 }
 
 .header--fixed {
-  margin-top: 0;
+  padding-top: 0;
+  height: 80px;
 }
 
 .nav__btn {
