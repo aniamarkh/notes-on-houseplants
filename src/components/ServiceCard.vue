@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue';
+import LinkComponent from './LinkComponent.vue';
 
 const props = defineProps({
   color: {
@@ -28,10 +29,7 @@ const serviceCardClass = computed(() => {
     <div class="service-card__text">
       <h3 class="service-card__title"><slot name="first"></slot></h3>
       <h3 class="service-card__title"><slot name="second"></slot></h3>
-      <div class="service-card__link">
-        <img class="link__icon" :src="linkIconSrc" alt="link icon" />
-        <a class="link__text" href="https://google.com" target="_blank">Learn more</a>
-      </div>
+      <LinkComponent :icon="linkIconSrc" />
     </div>
     <img class="service-card__img" :src="img" alt="service card illustration" />
   </div>
@@ -91,13 +89,11 @@ const serviceCardClass = computed(() => {
   @extend .service-card;
   background: $dark;
 
+  .link {
+    color: $bg-color;
+  }
   .service-card__title {
     background: $bg-color;
-    color: $text-color;
-  }
-
-  .service-card__link a {
-    color: $bg-color;
   }
 }
 
@@ -108,33 +104,6 @@ const serviceCardClass = computed(() => {
   .service-card__title {
     background: $bg-color;
     color: $text-color;
-  }
-}
-
-.service-card__link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 15px;
-  width: 164px;
-  height: 41px;
-  margin-top: 93px;
-  cursor: pointer;
-
-  .link__text {
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 28px;
-    color: #000000;
-  }
-
-  .link__icon {
-    transition: all 0.3s ease-in-out;
-  }
-
-  &:hover .link__icon {
-    transform: scale(1.1);
   }
 }
 </style>
