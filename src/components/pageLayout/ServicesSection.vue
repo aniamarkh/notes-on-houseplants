@@ -45,7 +45,6 @@ import cardsData from '../../data/servicesCards';
 
 .services__cards {
   width: auto;
-  margin-top: 80px;
   @include flex-row;
   flex-wrap: wrap;
   gap: 40px;

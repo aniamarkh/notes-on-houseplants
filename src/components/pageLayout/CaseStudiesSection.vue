@@ -40,12 +40,15 @@ import CaseStudiesCard from '../CaseStudiesCard.vue';
   height: 326px;
   background: $dark;
   border-radius: 45px;
-  margin-top: 80px;
 }
 
 .case-studies__line {
   width: 1px;
   height: 186px;
   background: $bg-color;
+}
+
+.section-title {
+  max-width: 850px;
 }
 </style>
