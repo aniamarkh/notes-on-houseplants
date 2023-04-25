@@ -9,6 +9,8 @@
 $accent-color: #B9FF66;
 $bg-color: #FFFFFF;
 $text-color: #000000;
+$grey: #f3f3f3;
+$dark: #191A23;
 
 @mixin transition-ease {
   transition: all 0.3s ease-in-out;
@@ -43,9 +45,4 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 100px;
-}
-
-button {
-  all: unset;
-  cursor: pointer;
 }

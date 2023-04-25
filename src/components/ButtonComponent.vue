@@ -19,29 +19,29 @@ const buttonClass = computed(() => {
 <style scoped lang="scss">
 @import '../style.scss';
 
-.button--black {
+.button {
+  all: unset;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   border-radius: 14px;
-  padding: 20px 35px 20px 35px;
-  border: 1px solid #191a23;
-  transition: all 0.4s;
-  background-color: $text-color;
-  color: $bg-color;
+  padding: 20px 35px;
+  border: 1px solid $dark;
 
   &:hover {
     color: $text-color;
-    background-color: $bg-color;
+    background-color: $accent-color;
   }
 }
 
-.button--white {
-  border-radius: 14px;
-  padding: 20px 35px;
-  border: 1px solid #191a23;
-  transition: all 0.4s;
+.button--black {
+  @extend .button;
+  background-color: $text-color;
+  color: $bg-color;
+}
 
-  &:hover {
-    color: $bg-color;
-    background-color: $text-color;
-  }
+.button--white {
+  @extend .button;
+  background-color: $bg-color;
+  color: $text-color;
 }
 </style>
