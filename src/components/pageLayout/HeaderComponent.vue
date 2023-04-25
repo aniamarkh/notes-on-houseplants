@@ -46,7 +46,7 @@ onUnmounted(() => {
 .header {
   height: 135px;
   padding-top: 55px;
-  width: 1440px;
+  width: 1240px;
   background-color: $bg-color;
   @include flex-row;
   justify-content: space-between;
@@ -55,7 +55,6 @@ onUnmounted(() => {
   transition: all 0.3s;
 
   #{&}__logo {
-    margin-left: 99px;
     cursor: pointer;
   }
 

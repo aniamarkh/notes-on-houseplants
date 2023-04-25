@@ -23,7 +23,6 @@ const buttonClass = computed(() => {
   border-radius: 14px;
   padding: 20px 35px 20px 35px;
   border: 1px solid #191a23;
-  margin-right: 101px;
   transition: all 0.4s;
   background-color: $text-color;
   color: $bg-color;
@@ -38,7 +37,6 @@ const buttonClass = computed(() => {
   border-radius: 14px;
   padding: 20px 35px;
   border: 1px solid #191a23;
-  margin-right: 101px;
   transition: all 0.4s;
 
   &:hover {
