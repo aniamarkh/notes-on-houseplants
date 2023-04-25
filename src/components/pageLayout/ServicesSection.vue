@@ -6,7 +6,7 @@ import cardsData from '../../data/servicesCards';
 </script>
 
 <template>
-  <section class="services-section">
+  <section class="services">
     <SectionTitle
       heading="Services"
       subheading="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
@@ -52,7 +52,7 @@ import cardsData from '../../data/servicesCards';
 }
 
 .services__proposal-card {
-  margin-top: 124px;
+  margin: 124px 0 24px 0;
   @include flex-row;
   align-items: center;
   padding: 0px 60px;
