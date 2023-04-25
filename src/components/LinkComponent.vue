@@ -1,16 +1,23 @@
 <script setup>
+import { ref } from 'vue';
 defineProps({
   icon: {
     type: String,
     required: true,
   },
 });
+const linkRef = ref(null);
+
+const openLink = () => {
+  const link = linkRef.value.href;
+  window.open(link, '_blank');
+};
 </script>
 
 <template>
-  <div class="link">
+  <div class="link" @click="openLink">
     <img class="link__icon" :src="icon" alt="link icon" />
-    <a class="link__text" href="https://google.com" target="_blank">Learn more</a>
+    <a ref="linkRef" class="link__text" href="https://google.com" target="_blank">Learn more</a>
   </div>
 </template>
 
