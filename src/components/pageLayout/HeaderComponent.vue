@@ -52,7 +52,8 @@ onUnmounted(() => {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
 
   #{&}__logo {
     cursor: pointer;
@@ -103,7 +104,7 @@ onUnmounted(() => {
     left: 0;
     background-color: #000000;
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-in-out;
   }
   &:hover::after {
     transform: scaleX(1);
