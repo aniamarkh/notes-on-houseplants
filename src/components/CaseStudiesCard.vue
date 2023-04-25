@@ -30,5 +30,9 @@ import LinkComponent from './LinkComponent.vue';
   color: $bg-color;
   gap: 6px;
   width: 155px;
+
+  &:hover {
+    color: $accent-color;
+  }
 }
 </style>

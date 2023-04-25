@@ -25,6 +25,7 @@ defineProps({
   height: 41px;
   margin-top: 93px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   .link__text {
     text-decoration: none;
