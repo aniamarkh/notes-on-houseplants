@@ -4,6 +4,7 @@ import HeroSection from './components/pageLayout/HeroSection.vue';
 import ServicesSection from './components/pageLayout/ServicesSection.vue';
 import CaseStudiesSection from './components/pageLayout/CaseStudiesSection.vue';
 import OurWorkingProcessSection from './components/pageLayout/OurWorkingProcessSection.vue';
+import TeamSection from './components/pageLayout/TeamSection.vue';
 </script>
 
 <template>
@@ -12,4 +13,5 @@ import OurWorkingProcessSection from './components/pageLayout/OurWorkingProcessS
   <ServicesSection />
   <CaseStudiesSection />
   <OurWorkingProcessSection />
+  <TeamSection />
 </template>
