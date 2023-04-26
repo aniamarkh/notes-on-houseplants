@@ -41,6 +41,7 @@ const isScrolled = toRef(scrolled, 'value');
 
 const scrollUp = () => {
   window.scrollTo(0, 0);
+  selectedNavItem.value = navItems[0].title;
 };
 
 onMounted(() => {
@@ -53,7 +54,7 @@ onUnmounted(() => {
 
 <template>
   <header :class="isScrolled ? 'header--fixed' : 'header'">
-    <img class="header__logo" src="../../assets/Logo.svg" @click="scrollUp" />
+    <img class="header__logo" src="assets/Logo.svg" @click="scrollUp" />
     <nav class="header__nav">
       <ul class="nav__list">
         <li
