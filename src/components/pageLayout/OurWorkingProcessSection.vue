@@ -5,7 +5,7 @@ import processCardsData from '../../data/processCards';
 </script>
 
 <template>
-  <section class="process">
+  <section id="process" class="process">
     <SectionTitle
       class="process__title"
       heading="Our Working Process"

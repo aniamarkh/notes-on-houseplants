@@ -2,10 +2,35 @@
 import Button from '../ButtonComponent.vue';
 import { ref, unref, toRef, onMounted, onUnmounted } from 'vue';
 
-const navItems = ['About us', 'Services', 'Case Studies', 'Process', 'Team', 'Testimonials'];
-const selectedNavItem = ref(navItems[0]);
-const updateSelectedNavItem = (item) => {
-  selectedNavItem.value = item;
+const navItems = [
+  {
+    title: 'About us',
+    href: '#app',
+  },
+  {
+    title: 'Services',
+    href: '#services',
+  },
+  {
+    title: 'Case Studies',
+    href: '#case-studies',
+  },
+  {
+    title: 'Process',
+    href: '#process',
+  },
+  {
+    title: 'Team',
+    href: '#team',
+  },
+  {
+    title: 'Testimonials',
+    href: '#testimonials',
+  },
+];
+const selectedNavItem = ref(navItems[0].title);
+const updateSelectedNavItem = (itemTitle) => {
+  selectedNavItem.value = itemTitle;
 };
 
 const scrolled = ref(false);
@@ -13,6 +38,11 @@ const checkScrollPosition = () => {
   scrolled.value = window.pageYOffset >= 30;
 };
 const isScrolled = toRef(scrolled, 'value');
+
+const scrollUp = () => {
+  window.scrollTo(0, 0);
+};
+
 onMounted(() => {
   window.addEventListener('scroll', checkScrollPosition);
 });
@@ -23,16 +53,16 @@ onUnmounted(() => {
 
 <template>
   <header :class="isScrolled ? 'header--fixed' : 'header'">
-    <img class="header__logo" src="../../assets/Logo.svg" />
+    <img class="header__logo" src="../../assets/Logo.svg" @click="scrollUp" />
     <nav class="header__nav">
       <ul class="nav__list">
         <li
           v-for="(item, index) of navItems"
           :key="index"
-          :class="item === unref(selectedNavItem) ? 'nav__item--selected' : 'nav__item'"
-          @click="updateSelectedNavItem(item)"
+          :class="item.title === unref(selectedNavItem) ? 'nav__item--selected' : 'nav__item'"
+          @click="updateSelectedNavItem(item.title)"
         >
-          {{ item }}
+          <a :href="item.href">{{ item.title }}</a>
         </li>
       </ul>
       <Button color="white">Request a quote</Button>

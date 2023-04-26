@@ -20,7 +20,7 @@ const toggleCards = () => {
 </script>
 
 <template>
-  <section class="team">
+  <section id="team" class="team">
     <SectionTitle
       heading="Team"
       subheading="Meet the skilled and experienced team behind our successful digital marketing strategies"

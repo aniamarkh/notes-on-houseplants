@@ -6,7 +6,7 @@ import cardsData from '../../data/servicesCards';
 </script>
 
 <template>
-  <section class="services">
+  <section id="services" class="services">
     <SectionTitle
       class="services__title"
       heading="Services"

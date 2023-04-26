@@ -4,7 +4,7 @@ import CaseStudiesCard from '../CaseStudiesCard.vue';
 </script>
 
 <template>
-  <section class="case-studies">
+  <section id="case-studies" class="case-studies">
     <SectionTitle
       class="case-studies__title"
       heading="Case Studies"
