@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import TestimonialCard from './TestimonialCard.vue';
-import testimonialsData from '../data/testimonials.js';
+import testimonialsData from '../../data/testimonials.js';
 
 const cardsContainer = ref(null);
 const cardsContainerStyles = ref({});
@@ -97,7 +97,7 @@ const isBtnDisabled = (btn) => {
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../../style.scss';
 @mixin background-no-repeat {
   background-repeat: no-repeat;
   background-position: center left;

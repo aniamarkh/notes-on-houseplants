@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import SectionTitle from '../SectionTitle.vue';
-import TeamMemberCard from '../TeamMemberCard.vue';
+import TeamMemberCard from './TeamMemberCard.vue';
 import teamMembersCards from '../../data/teamMembersCards';
 import ButtonComponent from '../ButtonComponent.vue';
 

@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '../SectionTitle.vue';
-import ProcessCard from '../ProcessCard.vue';
+import ProcessCard from './ProcessCard.vue';
 import processCardsData from '../../data/processCards';
 </script>
 

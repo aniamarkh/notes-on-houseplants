@@ -1,5 +1,5 @@
 <script setup>
-import Button from '../ButtonComponent.vue';
+import Button from './ButtonComponent.vue';
 </script>
 
 <template>
@@ -27,7 +27,7 @@ import Button from '../ButtonComponent.vue';
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../style.scss';
 
 .hero {
   width: 100%;

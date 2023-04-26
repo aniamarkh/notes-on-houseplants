@@ -1,5 +1,5 @@
 <script setup>
-import Button from '../ButtonComponent.vue';
+import Button from './ButtonComponent.vue';
 import { ref, unref, toRef, onMounted, onUnmounted } from 'vue';
 
 const navItems = [
@@ -72,7 +72,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../style.scss';
 
 .header {
   height: 135px;

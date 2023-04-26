@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '../SectionTitle.vue';
-import CaseStudiesCard from '../CaseStudiesCard.vue';
+import CaseStudiesCard from './CaseStudiesCard.vue';
 </script>
 
 <template>

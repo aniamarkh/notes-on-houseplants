@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '../SectionTitle.vue';
-import ServiceCard from '../ServiceCard.vue';
+import ServiceCard from './ServiceCard.vue';
 import ButtonComponent from '../ButtonComponent.vue';
 import cardsData from '../../data/servicesCards';
 </script>

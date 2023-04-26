@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '../SectionTitle.vue';
-import SwitcherComponent from '../SwitcherComponent.vue';
+import SwitcherComponent from './SwitcherComponent.vue';
 </script>
 
 <template>

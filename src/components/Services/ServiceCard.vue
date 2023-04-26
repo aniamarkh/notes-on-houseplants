@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import LinkComponent from './LinkComponent.vue';
+import LinkComponent from '../LinkComponent.vue';
 
 const props = defineProps({
   color: {
@@ -36,7 +36,7 @@ const serviceCardClass = computed(() => {
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../../style.scss';
 
 .service-card {
   width: 600px;
