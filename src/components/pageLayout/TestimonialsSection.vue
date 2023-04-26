@@ -1,10 +1,63 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import SectionTitle from '../SectionTitle.vue';
 import TestimonialCard from '../TestimonialCard.vue';
 import testimonialsData from '../../data/testimonials.js';
 
+const cardsContainer = ref(null);
+const cardsContainerStyles = ref({});
+const step = ref('');
+const activeCardIndex = ref(2);
+
+const setStep = () => {
+  const cardsContainerWidth = cardsContainer.value.scrollWidth;
+  const totalCards = testimonialsData.length;
+  step.value = cardsContainerWidth / totalCards;
+};
+
+const next = () => {
+  if (activeCardIndex.value !== testimonialsData.length - 1) {
+    activeCardIndex.value += 1;
+    move();
+  }
+};
+
+const prev = () => {
+  if (activeCardIndex.value !== 0) {
+    activeCardIndex.value -= 1;
+    move();
+  }
+};
+
+const move = () => {
+  const translateValue = (2 - activeCardIndex.value) * step.value;
+  cardsContainerStyles.value = {
+    transform: `translateX(${translateValue}px)`,
+  };
+};
+
+const moveTo = (index) => {
+  activeCardIndex.value = index;
+  const translateValue = (2 - index) * step.value;
+  cardsContainerStyles.value = {
+    transform: `translateX(${translateValue}px)`,
+  };
+};
+
+onMounted(() => {
+  setStep();
+});
+
 const pagItemClass = (index) => {
-  return index === 0 ? 'pagination__item--selected' : 'pagination__item';
+  return index === activeCardIndex.value ? 'pagination__item--selected' : 'pagination__item';
+};
+
+const isBtnDisabled = (btn) => {
+  return btn === 'next'
+    ? activeCardIndex.value === testimonialsData.length - 1
+    : btn === 'prev'
+    ? activeCardIndex.value === 0
+    : false;
 };
 </script>
 
@@ -15,8 +68,8 @@ const pagItemClass = (index) => {
       heading="Testimonials"
       subheading="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
     />
-    <div class="testimonials__carousel">
-      <div class="carousel__cards">
+    <div class="testimonials__switcher">
+      <div ref="cardsContainer" :style="cardsContainerStyles" class="switcher__cards">
         <TestimonialCard
           v-for="(card, index) of testimonialsData"
           :key="index"
@@ -25,16 +78,27 @@ const pagItemClass = (index) => {
           :role="card.role"
         />
       </div>
-      <div class="carousel__pagination">
-        <button disabled class="pagination__button-prev" @click="prev"></button>
+      <div class="switcher__pagination">
+        <button
+          ref="btnPrev"
+          :disabled="isBtnDisabled('prev')"
+          class="pagination__button-prev"
+          @click="prev"
+        ></button>
         <ul class="pagination__list">
           <li
             v-for="(card, index) of testimonialsData"
             :key="index"
             :class="pagItemClass(index)"
+            @click="moveTo(index)"
           ></li>
         </ul>
-        <button class="pagination__button-next" @click="next"></button>
+        <button
+          ref="btnNext"
+          :disabled="isBtnDisabled('next')"
+          class="pagination__button-next"
+          @click="next"
+        ></button>
       </div>
     </div>
   </section>
@@ -52,7 +116,7 @@ const pagItemClass = (index) => {
   max-width: 780px;
 }
 
-.testimonials__carousel {
+.testimonials__switcher {
   width: 1240px;
   height: 625px;
   background: $dark;
@@ -65,15 +129,16 @@ const pagItemClass = (index) => {
   overflow: hidden;
 }
 
-.carousel__cards {
+.switcher__cards {
   width: auto;
   @include flex-row;
   align-items: flex-start;
   justify-content: center;
   gap: 15px;
+  @include transition-ease;
 }
 
-.carousel__pagination {
+.switcher__pagination {
   @include flex-row;
   height: 40px;
   width: 580px;
@@ -90,13 +155,18 @@ const pagItemClass = (index) => {
     cursor: pointer;
     width: 14px;
     height: 14px;
-    background: url('/assets/carousel/pag-item.png');
+    background: url('/assets/switcher/pag-item.png');
     background-size: 14px;
+    @include transition-ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .pagination__item--selected {
     @extend .pagination__item;
-    background: url('/assets/carousel/pag-item-selected.png');
+    background: url('/assets/switcher/pag-item-selected.png');
   }
 
   .pagination__button {
@@ -113,11 +183,11 @@ const pagItemClass = (index) => {
 
   .pagination__button-prev {
     @extend .pagination__button;
-    background: url('/assets/carousel/arrow-left.png');
+    background: url('/assets/switcher/arrow-left.png');
     @include background-no-repeat;
 
     &:disabled {
-      background: url('/assets/carousel/arrow-left-disabled.png');
+      background: url('/assets/switcher/arrow-left-disabled.png');
       @include background-no-repeat;
       cursor: auto;
 
@@ -129,11 +199,11 @@ const pagItemClass = (index) => {
 
   .pagination__button-next {
     @extend .pagination__button;
-    background: url('/assets/carousel/arrow-right.png');
+    background: url('/assets/switcher/arrow-right.png');
     @include background-no-repeat;
 
     &:disabled {
-      background: url('/assets/carousel/arrow-right-disabled.png');
+      background: url('/assets/switcher/arrow-right-disabled.png');
       @include background-no-repeat;
       cursor: auto;
 
