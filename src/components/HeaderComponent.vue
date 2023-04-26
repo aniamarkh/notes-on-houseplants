@@ -1,34 +1,9 @@
 <script setup>
-import Button from './ButtonComponent.vue';
 import { ref, unref, toRef, onMounted, onUnmounted } from 'vue';
+import Button from './ButtonComponent.vue';
+import pageNavItems from '../data/pageNavItems.js';
 
-const navItems = [
-  {
-    title: 'About us',
-    href: '#app',
-  },
-  {
-    title: 'Services',
-    href: '#services',
-  },
-  {
-    title: 'Case Studies',
-    href: '#case-studies',
-  },
-  {
-    title: 'Process',
-    href: '#process',
-  },
-  {
-    title: 'Team',
-    href: '#team',
-  },
-  {
-    title: 'Testimonials',
-    href: '#testimonials',
-  },
-];
-const selectedNavItem = ref(navItems[0].title);
+const selectedNavItem = ref(pageNavItems[0].title);
 const updateSelectedNavItem = (itemTitle) => {
   selectedNavItem.value = itemTitle;
 };
@@ -41,7 +16,7 @@ const isScrolled = toRef(scrolled, 'value');
 
 const scrollUp = () => {
   window.scrollTo(0, 0);
-  selectedNavItem.value = navItems[0].title;
+  selectedNavItem.value = pageNavItems[0].title;
 };
 
 onMounted(() => {
@@ -58,7 +33,7 @@ onUnmounted(() => {
     <nav class="header__nav">
       <ul class="nav__list">
         <li
-          v-for="(item, index) of navItems"
+          v-for="(item, index) of pageNavItems"
           :key="index"
           :class="item.title === unref(selectedNavItem) ? 'nav__item--selected' : 'nav__item'"
           @click="updateSelectedNavItem(item.title)"
@@ -125,6 +100,7 @@ onUnmounted(() => {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  font-size: 20px;
 
   &::after {
     z-index: -1;
@@ -150,6 +126,7 @@ onUnmounted(() => {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  font-size: 20px;
 
   &::after {
     z-index: -1;

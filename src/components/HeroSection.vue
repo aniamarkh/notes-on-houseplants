@@ -59,6 +59,7 @@ import Button from './ButtonComponent.vue';
   line-height: 28px;
   width: 498px;
   margin: 35px 0;
+  font-size: 20px;
 }
 
 .hero__logos {

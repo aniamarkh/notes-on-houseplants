@@ -7,6 +7,7 @@ import OurWorkingProcessSection from './OurWorkingProcess/OurWorkingProcessSecti
 import TeamSection from './Team/TeamSection.vue';
 import TestimonialsSection from './Testimonials/TestimonialsSection.vue';
 import ContactSection from './ContactUs/ContactSection.vue';
+import FooterSection from './FooterSection.vue';
 </script>
 
 <template>
@@ -18,4 +19,5 @@ import ContactSection from './ContactUs/ContactSection.vue';
   <TeamSection />
   <TestimonialsSection />
   <ContactSection />
+  <FooterSection />
 </template>

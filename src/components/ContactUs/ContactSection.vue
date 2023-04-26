@@ -31,4 +31,12 @@ import SectionTitle from '../SectionTitle.vue';
 .section-title {
   max-width: 600px;
 }
+
+.contact__form-wrapper {
+  padding: 60px 100px 80px;
+  width: 1240px;
+  height: 773px;
+  background: $grey;
+  border-radius: 45px;
+}
 </style>

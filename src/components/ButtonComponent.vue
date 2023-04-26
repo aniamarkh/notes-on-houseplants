@@ -26,6 +26,7 @@ const buttonClass = computed(() => {
   border-radius: 14px;
   padding: 20px 35px;
   border: 1px solid $dark;
+  font-size: 20px;
 
   &:hover {
     color: $text-color;
@@ -43,5 +44,16 @@ const buttonClass = computed(() => {
   @extend .button;
   background-color: $bg-color;
   color: $text-color;
+}
+
+.button--green {
+  @extend .button;
+  background-color: $accent-color;
+  color: $text-color;
+  border: none;
+  &:hover {
+    color: $text-color;
+    background-color: $bg-color;
+  }
 }
 </style>

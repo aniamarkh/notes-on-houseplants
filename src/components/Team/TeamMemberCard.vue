@@ -68,6 +68,7 @@ const openLink = () => {
 
 .card__member-info {
   @include flex-column;
+  font-size: 20px;
 
   .member-info__role {
     font-size: 18px;
