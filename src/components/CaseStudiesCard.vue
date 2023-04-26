@@ -27,12 +27,8 @@ import LinkComponent from './LinkComponent.vue';
 .link {
   margin-top: 14px;
   flex-direction: row-reverse;
-  color: $bg-color;
+  color: $accent-color;
   gap: 6px;
   width: 155px;
-
-  &:hover {
-    color: $accent-color;
-  }
 }
 </style>

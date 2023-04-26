@@ -8,6 +8,7 @@ import cardsData from '../../data/servicesCards';
 <template>
   <section class="services">
     <SectionTitle
+      class="services__title"
       heading="Services"
       subheading="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
     />

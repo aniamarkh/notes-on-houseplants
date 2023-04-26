@@ -6,6 +6,7 @@ import CaseStudiesCard from '../CaseStudiesCard.vue';
 <template>
   <section class="case-studies">
     <SectionTitle
+      class="case-studies__title"
       heading="Case Studies"
       subheading="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
     />
@@ -14,12 +15,12 @@ import CaseStudiesCard from '../CaseStudiesCard.vue';
         For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50%
         increase in website traffic and a 25% increase in sales.
       </CaseStudiesCard>
-      <div class="case-studies__line"></div>
+      <div class="cards__separator"></div>
       <CaseStudiesCard>
         For a B2B software company, we developed an SEO strategy that resulted in a first page
         ranking for key keywords and a 200% increase in organic traffic.
       </CaseStudiesCard>
-      <div class="case-studies__line"></div>
+      <div class="cards__separator"></div>
       <CaseStudiesCard>
         For a national retail chain, we created a social media marketing campaign that increased
         followers by 25% and generated a 20% increase in online sales.
@@ -42,13 +43,13 @@ import CaseStudiesCard from '../CaseStudiesCard.vue';
   border-radius: 45px;
 }
 
-.case-studies__line {
+.cards__separator {
   width: 1px;
   height: 186px;
   background: $bg-color;
 }
 
-.section-title {
+.case-studies__title {
   max-width: 850px;
 }
 </style>

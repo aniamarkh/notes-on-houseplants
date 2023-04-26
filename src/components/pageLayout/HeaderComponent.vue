@@ -2,7 +2,7 @@
 import Button from '../ButtonComponent.vue';
 import { ref, unref, toRef, onMounted, onUnmounted } from 'vue';
 
-const navItems = ['About us', 'Services', 'Use Cases', 'Pricing', 'Blog'];
+const navItems = ['About us', 'Services', 'Case Studies', 'Process', 'Team', 'Testimonials'];
 const selectedNavItem = ref(navItems[0]);
 const updateSelectedNavItem = (item) => {
   selectedNavItem.value = item;
@@ -22,7 +22,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header :class="isScrolled ? 'header header--fixed' : 'header'">
+  <header :class="isScrolled ? 'header--fixed' : 'header'">
     <img class="header__logo" src="../../assets/Logo.svg" />
     <nav class="header__nav">
       <ul class="nav__list">
@@ -66,6 +66,7 @@ onUnmounted(() => {
 }
 
 .header--fixed {
+  @extend .header;
   padding-top: 0;
   height: 80px;
 }
@@ -86,7 +87,7 @@ onUnmounted(() => {
 .nav__list {
   list-style-type: none;
   @include flex-row;
-  gap: 40px;
+  gap: 20px;
 }
 
 .nav__item {

@@ -20,7 +20,7 @@ const linkIconSrc = computed(() => {
 });
 
 const serviceCardClass = computed(() => {
-  return 'service-card ' + 'service-card--' + props.color;
+  return 'service-card--' + props.color;
 });
 </script>
 

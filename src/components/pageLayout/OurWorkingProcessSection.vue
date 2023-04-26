@@ -5,12 +5,13 @@ import processCardsData from '../../data/processCards';
 </script>
 
 <template>
-  <section class="working-process">
+  <section class="process">
     <SectionTitle
+      class="process__title"
       heading="Our Working Process"
       subheading="Step-by-Step Guide to Achieving Your Business Goals"
     />
-    <div class="working-process__cards">
+    <div class="process__cards">
       <ProcessCard
         v-for="(card, index) of processCardsData"
         :key="index"
@@ -30,7 +31,7 @@ import processCardsData from '../../data/processCards';
   max-width: 750px;
 }
 
-.working-process__cards {
+.process__cards {
   width: 100%;
   @include flex-column;
   gap: 30px;
