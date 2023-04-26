@@ -54,7 +54,7 @@ onUnmounted(() => {
 
 <template>
   <header :class="isScrolled ? 'header--fixed' : 'header'">
-    <img class="header__logo" src="assets/Logo.svg" @click="scrollUp" />
+    <img class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
     <nav class="header__nav">
       <ul class="nav__list">
         <li

@@ -39,7 +39,7 @@ defineProps({
   font-size: 18px;
   height: 266px;
   padding: 48px 52px 80px 52px;
-  background: url('src/assets/bubble.png');
+  background: url('/assets/bubble.png');
 }
 
 .card__name {
