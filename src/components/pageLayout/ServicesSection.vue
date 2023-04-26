@@ -34,7 +34,7 @@ import cardsData from '../../data/servicesCards';
       </div>
       <img
         class="proposal-card__img"
-        src="src/assets/services-cards/services-Illustration.png"
+        src="/assets/services-cards/services-Illustration.png"
         alt="proposal illustration"
       />
     </div>

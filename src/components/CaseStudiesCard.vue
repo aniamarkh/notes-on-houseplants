@@ -5,7 +5,7 @@ import LinkComponent from './LinkComponent.vue';
 <template>
   <div class="case-card">
     <p class="case-card__text"><slot></slot></p>
-    <LinkComponent icon="src/assets/services-cards/link-icon-black.svg" />
+    <LinkComponent icon="/assets/services-cards/link-icon-black.svg" />
   </div>
 </template>
 

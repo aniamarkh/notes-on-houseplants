@@ -85,7 +85,7 @@ const openLink = () => {
   font-size: 18px;
 }
 .card__icon {
-  background: url('src/assets/team/in-icon.png');
+  background: url('/assets/team/in-icon.png');
   width: 34px;
   height: 34px;
   background-size: 34px;

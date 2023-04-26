@@ -15,8 +15,8 @@ const props = defineProps({
 
 const linkIconSrc = computed(() => {
   return props.color === 'black'
-    ? 'src/assets/services-cards/link-icon-white.svg'
-    : 'src/assets/services-cards/link-icon-black.svg';
+    ? '/assets/services-cards/link-icon-white.svg'
+    : '/assets/services-cards/link-icon-black.svg';
 });
 
 const serviceCardClass = computed(() => {

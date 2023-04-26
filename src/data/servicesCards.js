@@ -3,37 +3,37 @@ const cardsData = [
     firstLine: 'Search engine',
     secondLine: 'optimization',
     color: 'white',
-    imgSrc: 'src/assets/services-cards/1.png',
+    imgSrc: '/assets/services-cards/1.png',
   },
   {
     firstLine: 'Pay-per-click',
     secondLine: 'advertising',
     color: 'green',
-    imgSrc: 'src/assets/services-cards/2.png',
+    imgSrc: '/assets/services-cards/2.png',
   },
   {
     firstLine: 'Social Media',
     secondLine: 'Marketing',
     color: 'black',
-    imgSrc: 'src/assets/services-cards/3.png',
+    imgSrc: '/assets/services-cards/3.png',
   },
   {
     firstLine: 'Email',
     secondLine: 'Marketing',
     color: 'white',
-    imgSrc: 'src/assets/services-cards/4.png',
+    imgSrc: '/assets/services-cards/4.png',
   },
   {
     firstLine: 'Content',
     secondLine: 'Creation',
     color: 'green',
-    imgSrc: 'src/assets/services-cards/5.png',
+    imgSrc: '/assets/services-cards/5.png',
   },
   {
     firstLine: 'Analytics and',
     secondLine: 'Tracking',
     color: 'black',
-    imgSrc: 'src/assets/services-cards/6.png',
+    imgSrc: '/assets/services-cards/6.png',
   },
 ];
 

@@ -84,7 +84,7 @@ const toggleCard = () => {
   }
 
   .card__top .card__button {
-    background: url('src/assets/plus-icon.png');
+    background: url('/assets/plus-icon.png');
     background-size: 58px;
     width: 58px;
     height: 59px;
@@ -112,7 +112,7 @@ const toggleCard = () => {
   }
 
   .card__button {
-    background: url('src/assets/minus-icon.png');
+    background: url('/assets/minus-icon.png');
     background-size: 58px;
     width: 58px;
     height: 59px;
