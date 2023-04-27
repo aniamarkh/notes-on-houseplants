@@ -52,4 +52,21 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
 .case-studies__title {
   max-width: 850px;
 }
+
+@media (max-width: 900px) {
+  .case-studies__cards {
+    align-items: center;
+    background: none;
+    width: auto;
+    overflow: scroll;
+    padding: 0 20px;
+    gap: 20px;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .cards__separator {
+    display: none;
+  }
+}
 </style>

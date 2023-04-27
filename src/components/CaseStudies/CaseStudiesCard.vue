@@ -31,4 +31,22 @@ import LinkComponent from '../LinkComponent.vue';
   gap: 6px;
   width: 155px;
 }
+
+@media (max-width: 900px) {
+  .case-card {
+    width: 350px;
+    height: 250px;
+    background: $dark;
+    color: $bg-color;
+    border-radius: 45px;
+    padding: 45px 50px;
+    @include flex-column;
+
+    &__text {
+      width: 250px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
 </style>
