@@ -1,7 +1,6 @@
 <script setup>
 // import Button from '../ButtonComponent.vue';
-import SayHiForm from './SayHiForm.vue';
-import QuoteForm from './QuoteForm.vue';
+import Form from './DynamicForm.vue';
 import SectionTitle from '../SectionTitle.vue';
 defineProps({
   selectedOption: {
@@ -52,8 +51,7 @@ const handleChange = (event) => {
         </div>
       </div>
       <div class="form-wrapper__form">
-        <SayHiForm v-if="selectedOption === 'sayHi'" />
-        <QuoteForm v-if="selectedOption === 'getAQuote'" />
+        <Form :form-type="selectedOption" />
       </div>
     </div>
   </section>

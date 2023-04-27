@@ -1,28 +1,43 @@
-<script setup lang="ts">
-import { ref } from 'vue';
+<script setup>
+import { ref, computed } from 'vue';
 import Button from '../ButtonComponent.vue';
+
+const props = defineProps({
+  formType: {
+    type: String,
+    default: 'getAQuote',
+  },
+});
 
 const formRef = ref(null);
 const handleSubmit = () => {
   formRef.value.reset();
 };
+
+const nameLabel = computed(() => (props.formType === 'getAQuote' ? 'Company Name' : 'Name'));
+const messageLabel = computed(() =>
+  props.formType === 'getAQuote' ? 'Tell about your project*' : 'Message*'
+);
+const buttonText = computed(() =>
+  props.formType === 'getAQuote' ? 'Request a quote' : 'Send Message'
+);
 </script>
 
 <template>
   <form ref="formRef" class="form" @submit.prevent="handleSubmit">
-    <label class="form__label" for="name">Company Name</label>
-    <input id="name" class="form__input--name" placeholder="Company Name" type="text" />
+    <label class="form__label" for="name">{{ nameLabel }}</label>
+    <input id="name" class="form__input--name" :placeholder="nameLabel" type="text" />
     <label class="form__label" for="email">Email*</label>
     <input id="email" class="form__input--email" placeholder="Email" type="email" />
-    <label class="form__label" for="message">Tell about your project*</label>
+    <label class="form__label" for="message">{{ messageLabel }}</label>
     <textarea
       id="message"
       class="form__input--message"
-      placeholder="Message"
+      :placeholder="messageLabel"
       type="text"
     ></textarea>
     <Button color="black" type="submit">
-      <p class="button__text">Request a quote</p>
+      <p class="button__text">{{ buttonText }}</p>
     </Button>
   </form>
 </template>
