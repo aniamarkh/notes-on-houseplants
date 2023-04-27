@@ -2,6 +2,20 @@
 import { ref, toRef, onMounted, onUnmounted } from 'vue';
 import Button from './ButtonComponent.vue';
 import pageNavItems from '../data/pageNavItems.js';
+defineProps({
+  selectedOption: {
+    type: String,
+    default: 'sayHi',
+  },
+});
+
+const emit = defineEmits(['update:selected-option']);
+const quoteLink = ref(null);
+
+const handleQuoteRequest = () => {
+  emit('update:selected-option', 'getAQuote');
+  quoteLink.value.click();
+};
 
 const scrolled = ref(false);
 const checkScrollPosition = () => {
@@ -30,7 +44,9 @@ onUnmounted(() => {
           <a :href="item.href">{{ item.title }}</a>
         </li>
       </ul>
-      <Button color="white">Request a quote</Button>
+      <Button color="white" @click="handleQuoteRequest">
+        <a ref="quoteLink" href="#contact-us">Request a quote</a>
+      </Button>
     </nav>
   </header>
 </template>

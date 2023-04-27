@@ -1,5 +1,21 @@
 <script setup>
+import { ref } from 'vue';
 import Button from './ButtonComponent.vue';
+
+defineProps({
+  selectedOption: {
+    type: String,
+    default: 'sayHi',
+  },
+});
+
+const emit = defineEmits(['update:selected-option']);
+const sayHiLink = ref(null);
+
+const handleButton = () => {
+  emit('update:selected-option', 'sayHi');
+  sayHiLink.value.click();
+};
 </script>
 
 <template>
@@ -11,7 +27,9 @@ import Button from './ButtonComponent.vue';
           Our digital marketing agency helps businesses grow and succeed online through a range of
           services including SEO, PPC, social media marketing, and content creation.
         </p>
-        <Button color="black">Book a consultation</Button>
+        <Button color="black" @click="handleButton">
+          <a ref="sayHiLink" href="#contact-us">Book a consultation</a>
+        </Button>
       </div>
       <img class="hero__img" src="/assets/hero-illustration.svg" alt="illustration of a horn" />
     </div>
