@@ -49,4 +49,13 @@ const openLink = () => {
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 900px) {
+  .link {
+    margin-top: 108px;
+  }
+  .link__text {
+    display: none;
+  }
+}
 </style>

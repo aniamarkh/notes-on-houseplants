@@ -23,12 +23,17 @@ const handleButton = () => {
     <div class="hero__top">
       <div class="hero__text-block">
         <h1 class="text-block__title">Navigating the digital landscape for success</h1>
+        <img
+          class="hero__img--mobile"
+          src="/assets/hero-illustration.svg"
+          alt="illustration of a horn"
+        />
         <p class="text-block__paragraph">
           Our digital marketing agency helps businesses grow and succeed online through a range of
           services including SEO, PPC, social media marketing, and content creation.
         </p>
         <Button color="black" @click="handleButton">
-          <a ref="sayHiLink" href="#contact-us">Book a consultation</a>
+          <a ref="sayHiLink" class="button__link" href="#contact-us">Book a consultation</a>
         </Button>
       </div>
       <img class="hero__img" src="/assets/hero-illustration.svg" alt="illustration of a horn" />
@@ -46,7 +51,6 @@ const handleButton = () => {
 
 <style scoped lang="scss">
 @import '../style.scss';
-
 .hero {
   width: 100%;
   @include flex-column;
@@ -63,6 +67,10 @@ const handleButton = () => {
   &__text-block {
     width: 531px;
     height: 481px;
+  }
+
+  &__img--mobile {
+    display: none;
   }
 }
 
@@ -82,15 +90,105 @@ const handleButton = () => {
 
 .hero__logos {
   width: 100%;
-  height: 48px;
-  display: flex;
-  flex-direction: row;
+  height: auto;
+  @include flex-row;
   align-items: center;
   justify-content: space-between;
+
+  .logos__item {
+    mix-blend-mode: luminosity;
+    height: 48px;
+  }
 }
 
-.logos__item {
-  mix-blend-mode: luminosity;
-  height: 48px;
+.button__link {
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    margin-top: 95px;
+    padding: 0 20px;
+    &__img {
+      display: none;
+    }
+
+    &__text-block {
+      width: 100%;
+      height: inherit;
+      @include flex-column;
+    }
+
+    &__img--mobile {
+      display: block;
+      width: 360px;
+      height: 310px;
+      margin: 10px auto;
+    }
+
+    &__top {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+  // .hero {
+  //   max-width: 100%;
+  //   margin-top: 95px;
+  //   gap: 68px;
+  //   height: 800px;
+
+  //   &__top {
+  //     flex-wrap: wrap;
+  //     width: 100%;
+  //   }
+
+  //   &__text-block {
+  //     width: 100%;
+  //     height: inherit;
+  //     @include flex-column;
+  //   }
+
+  //   &__img {
+  //     display: none;
+  //   }
+
+  //   &__img--mobile {
+  //     display: block;
+  //     width: 360px;
+  //     height: 310px;
+  //     margin: 10px auto;
+  //   }
+  // }
+
+  // .button__link {
+  //   font-size: 20px;
+  //   line-height: 28px;
+  //   text-align: center;
+  // }
+
+  .text-block__title {
+    font-size: 43px;
+    line-height: 55px;
+  }
+
+  .text-block__paragraph {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 14px;
+  }
+
+  .hero__logos {
+    width: 100%;
+    @include flex-row;
+    flex-wrap: wrap;
+    gap: 8px 38px;
+    justify-content: center;
+    height: auto;
+  }
+
+  .logos__item {
+    mix-blend-mode: luminosity;
+  }
 }
 </style>

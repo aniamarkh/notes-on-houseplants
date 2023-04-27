@@ -22,8 +22,7 @@ defineProps({
 @import '../style.scss';
 
 .section-title {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   gap: 40px;
   margin: 140px 0 80px;
   height: 51px;
@@ -43,6 +42,32 @@ defineProps({
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-title {
+    display: block;
+    margin: 60px 0 40px;
+    height: auto;
+    padding: 0 20px;
+
+    &__heading {
+      font-size: 36px;
+      line-height: 46px;
+      background-color: #b9ff66;
+      border-radius: 7px;
+      white-space: wrap;
+      margin: 0 auto;
+      width: max-content;
+    }
+
+    &__subheading {
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 30px;
+    }
   }
 }
 </style>

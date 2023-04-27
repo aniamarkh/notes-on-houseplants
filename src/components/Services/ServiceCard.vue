@@ -106,4 +106,31 @@ const serviceCardClass = computed(() => {
     color: $text-color;
   }
 }
+
+@media (max-width: 900px) {
+  .service-card {
+    width: 390px;
+    height: 322px;
+    position: relative;
+
+    &__img {
+      position: absolute;
+      right: 50px;
+      bottom: 50px;
+      width: 165px;
+    }
+
+    &__text {
+      @include flex-column;
+      gap: 9px;
+    }
+
+    &__title {
+      font-size: 26px;
+      line-height: 33px;
+      margin-top: -8px;
+      width: max-content;
+    }
+  }
+}
 </style>

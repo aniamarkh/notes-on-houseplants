@@ -85,4 +85,50 @@ import cardsData from '../../data/servicesCards';
     margin: 26px 0;
   }
 }
+
+@media (max-width: 500px) {
+  .services__cards {
+    width: 100%;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .services {
+    @include flex-column;
+    align-items: center;
+  }
+  .services__cards {
+    @include flex-column;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+  }
+  .services__proposal-card {
+    margin: 70px 0 0;
+    padding: 50px;
+    width: 390px;
+    height: 370px;
+  }
+
+  .proposal-card__img {
+    display: none;
+  }
+
+  .proposal-card__text {
+    height: 270px;
+    width: auto;
+
+    .text__title {
+      font-size: 26px;
+      line-height: 33px;
+    }
+
+    .text__paragraph {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 20px 0;
+    }
+  }
+}
 </style>

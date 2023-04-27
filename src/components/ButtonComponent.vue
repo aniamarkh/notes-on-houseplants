@@ -27,7 +27,8 @@ const buttonClass = computed(() => {
   padding: 20px 35px;
   border: 1px solid $dark;
   font-size: 20px;
-
+  line-height: 28px;
+  text-align: center;
   &:hover {
     color: $text-color;
     background-color: $accent-color;

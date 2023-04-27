@@ -24,7 +24,6 @@ $dark: #191A23;
 @mixin flex-row {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .material-symbols-outlined {
@@ -45,12 +44,18 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 100px;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   font-size: 18px;
+}
 
-
+@media (max-width: 600px) {
+  #app {
+    width: 100vw;
+    padding: 0;
+  }
 }

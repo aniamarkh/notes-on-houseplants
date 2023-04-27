@@ -19,7 +19,7 @@ const handleQuoteRequest = () => {
 
 const scrolled = ref(false);
 const checkScrollPosition = () => {
-  scrolled.value = window.pageYOffset >= 30;
+  scrolled.value = window.pageYOffset >= 10;
 };
 const isScrolled = toRef(scrolled, 'value');
 
@@ -45,7 +45,7 @@ onUnmounted(() => {
         </li>
       </ul>
       <Button color="white" @click="handleQuoteRequest">
-        <a ref="quoteLink" href="#contact-us">Request a quote</a>
+        <a ref="quoteLink" class="button__link" href="#contact-us">Request a quote</a>
       </Button>
     </nav>
   </header>
@@ -57,10 +57,10 @@ onUnmounted(() => {
 .header {
   height: 135px;
   padding-top: 55px;
-  width: 1240px;
   background-color: $bg-color;
   @include flex-row;
-  justify-content: space-between;
+  gap: 160px;
+  align-items: center;
   position: fixed;
   top: 0;
   transition: all 0.3s ease-in-out;
@@ -68,10 +68,12 @@ onUnmounted(() => {
 
   &__logo {
     cursor: pointer;
+    width: 220px;
   }
 
   &__nav {
     @include flex-row;
+    align-items: center;
     gap: 40px;
   }
 
@@ -93,6 +95,10 @@ onUnmounted(() => {
     color: $bg-color;
     background-color: $text-color;
   }
+}
+
+.button__link {
+  font-size: 20px;
 }
 
 .nav__list {
@@ -124,6 +130,26 @@ onUnmounted(() => {
   &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    width: 100vw;
+    height: 82px;
+    padding: 0 20px;
+
+    &__nav {
+      display: none;
+    }
+
+    &__logo {
+      width: 144px;
+    }
+
+    &--fixed {
+      height: 40px;
+    }
   }
 }
 </style>
