@@ -143,4 +143,31 @@ const handleChange = (event) => {
     }
   }
 }
+
+@media (max-width: 900px) {
+  .contact-us {
+    width: 100%;
+
+    &__wrapper {
+      margin: 0 auto;
+      width: 90%;
+      height: 540px;
+      padding: 40px 30px;
+      background-image: none;
+    }
+
+    &__switcher {
+      @include flex-row;
+      gap: 40px;
+      align-items: center;
+    }
+  }
+
+  .switcher {
+    &__label {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  }
+}
 </style>

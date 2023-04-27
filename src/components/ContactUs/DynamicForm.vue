@@ -33,7 +33,7 @@ const buttonText = computed(() =>
     <textarea
       id="message"
       class="form__input--message"
-      :placeholder="messageLabel"
+      placeholder="Message"
       type="text"
     ></textarea>
     <Button color="black" type="submit">
@@ -76,6 +76,31 @@ const buttonText = computed(() =>
   &--message {
     height: 190px;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    @include flex-column;
+    width: 100%;
+
+    &__label {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 9px;
+    }
+  }
+
+  .form__input {
+    width: 100%;
+    margin-bottom: 23px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 18px 20px;
+    &--message {
+      height: 132px;
+      margin-bottom: 80px;
+    }
   }
 }
 </style>
