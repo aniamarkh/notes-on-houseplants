@@ -44,6 +44,7 @@ import processCardsData from '../../data/processCards';
 
   .process__cards {
     padding: 0 20px;
+    gap: 20px;
   }
 }
 </style>

@@ -155,7 +155,7 @@ const toggleCard = () => {
     }
 
     .card__title {
-      width: 250px;
+      width: 300px;
     }
 
     .card__button {
@@ -175,7 +175,7 @@ const toggleCard = () => {
     }
 
     .card__title {
-      width: 250px;
+      width: 300px;
     }
 
     .card__top .card__button {
@@ -186,7 +186,6 @@ const toggleCard = () => {
   }
 
   .card__top {
-    height: 30px;
     .card__title {
       gap: 33px;
       font-size: 18px;
