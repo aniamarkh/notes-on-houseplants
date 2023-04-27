@@ -56,8 +56,7 @@ const scrollUp = () => {
 
 .footer {
   margin-top: 140px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: flex-start;
   padding: 55px 60px 50px;
   width: 1241px;
@@ -197,5 +196,102 @@ const scrollUp = () => {
 
 .item__icon {
   width: 18px;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-top: 190px;
+    padding: 47px 20px;
+    position: relative;
+
+    &__links {
+      @include flex-column;
+      align-items: center;
+      height: auto;
+    }
+
+    &__contacts {
+      @include flex-column;
+      align-items: center;
+      gap: 37px;
+      width: 100%;
+      margin-top: 36px;
+      width: 100%;
+    }
+  }
+
+  .links {
+    &__logo {
+      width: 144px;
+      cursor: pointer;
+    }
+
+    &__sections {
+      margin-top: 40px;
+      @include flex-column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__social {
+      position: absolute;
+      bottom: 155px;
+    }
+  }
+
+  .sections__item {
+    text-decoration: none;
+    a {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .contacts {
+    width: 100%;
+
+    &__info {
+      width: 100%;
+      @include flex-column;
+      align-items: center;
+      .info__title {
+        font-size: 18px;
+        line-height: 23px;
+        width: max-content;
+        margin-bottom: 20px;
+      }
+
+      .info__paragraph {
+        width: 70%;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 15px;
+      }
+    }
+
+    &__sub {
+      @include flex-column;
+      gap: 20px;
+      width: 100%;
+      height: 216px;
+      padding: 30px;
+      margin-bottom: 50px;
+
+      .sub__input {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 18px 20px;
+      }
+    }
+  }
+
+  .rights__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 </style>
