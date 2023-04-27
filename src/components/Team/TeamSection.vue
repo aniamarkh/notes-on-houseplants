@@ -81,14 +81,19 @@ const toggleCards = () => {
 @media (max-width: 900px) {
   .team {
     @include flex-column;
+    width: 100%;
   }
+
   .team__title {
     margin: 60px auto 32px;
   }
+
   .team__cards {
+    @include flex-column;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 30px;
     padding: 10px 20px;
-    justify-content: center;
   }
 
   .team__cards--collapsed {

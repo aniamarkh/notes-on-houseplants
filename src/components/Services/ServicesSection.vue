@@ -43,7 +43,6 @@ import cardsData from '../../data/servicesCards';
 
 <style scoped lang="scss">
 @import '../../style.scss';
-
 .services__cards {
   width: auto;
   @include flex-row;
@@ -84,6 +83,10 @@ import cardsData from '../../data/servicesCards';
     line-height: 23px;
     margin: 26px 0;
   }
+}
+
+.services__title {
+  max-width: 800px !important;
 }
 
 @media (max-width: 500px) {

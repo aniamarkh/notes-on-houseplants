@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import TestimonialCard from './TestimonialCard.vue';
 import testimonialsData from '../../data/testimonials.js';
 
@@ -17,6 +17,7 @@ const setStep = () => {
 const next = () => {
   if (activeCardIndex.value !== testimonialsData.length - 1) {
     activeCardIndex.value += 1;
+    setStep();
     move();
   }
 };
@@ -24,6 +25,7 @@ const next = () => {
 const prev = () => {
   if (activeCardIndex.value !== 0) {
     activeCardIndex.value -= 1;
+    setStep();
     move();
   }
 };
@@ -42,10 +44,6 @@ const moveTo = (index) => {
     transform: `translateX(${translateValue}px)`,
   };
 };
-
-onMounted(() => {
-  setStep();
-});
 
 const pagItemClass = (index) => {
   return index === activeCardIndex.value ? 'pagination__item--selected' : 'pagination__item';
@@ -199,6 +197,22 @@ const isBtnDisabled = (btn) => {
         transform: none;
       }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials__switcher {
+    width: 100%;
+    height: 554px;
+    padding: 30px 0 68px;
+  }
+  .switcher__cards {
+    height: 330px;
+  }
+
+  .switcher__pagination {
+    width: 330px;
+    gap: 70px;
   }
 }
 </style>

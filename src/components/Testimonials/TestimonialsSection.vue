@@ -19,4 +19,14 @@ import SwitcherComponent from './SwitcherComponent.vue';
   margin-top: 100px !important;
   max-width: 780px !important;
 }
+
+@media (max-width: 900px) {
+  .testimonials {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .testimonials__title {
+    margin: 56px 0 40px !important;
+  }
+}
 </style>

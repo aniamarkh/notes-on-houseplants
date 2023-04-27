@@ -55,4 +55,33 @@ defineProps({
   line-height: 23px;
   margin: 0 0 0 80px;
 }
+
+@media (max-width: 900px) {
+  .testimonial-card {
+    width: 330px;
+    height: 335px;
+    margin: 0;
+  }
+
+  .card__paragraph {
+    min-height: 330px;
+    background: url('src/assets/bubble-mobile.png');
+    background-repeat: no-repeat;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 30px 30px 57px 30px;
+  }
+
+  .card__name {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 17px 0 0 65px;
+  }
+
+  .card__role {
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 0 65px;
+  }
+}
 </style>
