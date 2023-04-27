@@ -36,4 +36,14 @@ import processCardsData from '../../data/processCards';
   @include flex-column;
   gap: 30px;
 }
+
+@media (max-width: 900px) {
+  .process__title {
+    margin: 60px 0 30px !important;
+  }
+
+  .process__cards {
+    padding: 0 20px;
+  }
+}
 </style>

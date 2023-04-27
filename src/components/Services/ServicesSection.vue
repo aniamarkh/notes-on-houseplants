@@ -99,9 +99,10 @@ import cardsData from '../../data/servicesCards';
     align-items: center;
   }
   .services__cards {
-    @include flex-column;
     width: 100%;
+    padding: 0 20px;
     align-items: center;
+    justify-content: center;
     gap: 30px;
   }
   .services__proposal-card {

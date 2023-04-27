@@ -57,7 +57,6 @@ defineProps({
       line-height: 46px;
       background-color: #b9ff66;
       border-radius: 7px;
-      white-space: wrap;
       margin: 0 auto;
       width: max-content;
     }

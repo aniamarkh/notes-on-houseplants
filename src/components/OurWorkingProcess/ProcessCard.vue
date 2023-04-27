@@ -67,6 +67,19 @@ const toggleCard = () => {
   transition: all 0.2s ease-in-out;
 }
 
+.card__button {
+  background: url('/assets/minus-icon.png');
+  background-size: 58px;
+  width: 58px;
+  height: 59px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .process-card--open {
   @extend .process_card;
 }
@@ -99,6 +112,7 @@ const toggleCard = () => {
 
   .card__title {
     @include flex-row;
+    align-items: center;
     gap: 27px;
     font-weight: 500;
     font-size: 30px;
@@ -109,19 +123,6 @@ const toggleCard = () => {
     font-weight: 500;
     font-size: 60px;
     line-height: 77px;
-  }
-
-  .card__button {
-    background: url('/assets/minus-icon.png');
-    background-size: 58px;
-    width: 58px;
-    height: 59px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 }
 
@@ -140,6 +141,66 @@ const toggleCard = () => {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
+  }
+}
+
+@media (max-width: 900px) {
+  .process-card--open {
+    width: 100%;
+    padding: 30px;
+    height: auto;
+
+    .card__desc {
+      margin-top: 20px;
+    }
+
+    .card__title {
+      width: 250px;
+    }
+
+    .card__button {
+      background-size: 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .process-card--close {
+    width: 100%;
+    padding: 30px;
+    height: 98px;
+
+    .card__desc {
+      margin-top: 20px;
+    }
+
+    .card__title {
+      width: 250px;
+    }
+
+    .card__top .card__button {
+      background-size: 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .card__top {
+    height: 30px;
+    .card__title {
+      gap: 33px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .card__number {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
+  .card__separator {
+    display: none;
   }
 }
 </style>
