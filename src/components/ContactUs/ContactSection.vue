@@ -1,5 +1,7 @@
 <script setup>
 // import Button from '../ButtonComponent.vue';
+import SayHiForm from './SayHiForm.vue';
+import QuoteForm from './QuoteForm.vue';
 import SectionTitle from '../SectionTitle.vue';
 defineProps({
   selectedOption: {
@@ -50,8 +52,8 @@ const handleChange = (event) => {
         </div>
       </div>
       <div class="form-wrapper__form">
-        <p v-if="selectedOption === 'sayHi'">SAY HI</p>
-        <p v-if="selectedOption === 'getAQuote'">QUOTE</p>
+        <SayHiForm v-if="selectedOption === 'sayHi'" />
+        <QuoteForm v-if="selectedOption === 'getAQuote'" />
       </div>
     </div>
   </section>
@@ -66,6 +68,8 @@ const handleChange = (event) => {
 
 .contact-us {
   &__wrapper {
+    @include flex-column;
+    gap: 45px;
     padding: 58px 99px 80px;
     width: 1240px;
     height: 773px;
