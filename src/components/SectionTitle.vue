@@ -28,21 +28,21 @@ defineProps({
   margin: 140px 0 80px;
   height: 51px;
   max-width: 800px;
-}
 
-.section-title__heading {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 51px;
-  padding: 0px 7px;
-  background-color: #b9ff66;
-  border-radius: 7px;
-  white-space: nowrap;
-}
+  &__heading {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 51px;
+    padding: 0px 7px;
+    background-color: #b9ff66;
+    border-radius: 7px;
+    white-space: nowrap;
+  }
 
-.section-title__subheading {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
+  &__subheading {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 </style>

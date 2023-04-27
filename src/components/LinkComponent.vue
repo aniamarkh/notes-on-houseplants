@@ -34,18 +34,18 @@ const openLink = () => {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
-  .link__text {
+  &__text {
     text-decoration: none;
     font-size: 20px;
     line-height: 28px;
     color: inherit;
   }
 
-  .link__icon {
+  &__icon {
     transition: all 0.3s ease-in-out;
   }
 
-  &:hover .link__icon {
+  &:hover &__icon {
     transform: scale(1.1);
   }
 }

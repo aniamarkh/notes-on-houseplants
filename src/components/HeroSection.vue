@@ -35,14 +35,14 @@ import Button from './ButtonComponent.vue';
   margin-top: 198px;
   gap: 70px;
 
-  #{&}__top {
+  &__top {
     @include flex-row;
     align-items: flex-start;
     gap: 108px;
     width: 100%;
   }
 
-  #{&}__text-block {
+  &__text-block {
     width: 531px;
     height: 481px;
   }

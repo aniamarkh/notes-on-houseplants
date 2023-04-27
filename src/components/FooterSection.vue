@@ -45,7 +45,7 @@ const scrollUp = () => {
         target="_blank"
         href="https://www.figma.com/community/file/1230604708032389430"
       >
-        Layout link
+        Layout link (I'm not an owner :>)
       </a>
     </div>
   </footer>
@@ -65,24 +65,46 @@ const scrollUp = () => {
   color: $bg-color;
   background: $dark;
   border-radius: 45px 45px 0px 0px;
+
+  &__links {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__contacts {
+    @include flex-row;
+    align-items: start;
+    margin-top: 66px;
+    gap: 184px;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: $bg-color;
+    margin: 50px 0;
+  }
+
+  &__rights {
+    @include flex-row;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
-.footer__links {
-  @include flex-row;
-  justify-content: space-between;
-  width: 100%;
-}
+.links {
+  &__logo {
+    width: 180px;
+    cursor: pointer;
+  }
 
-.links__logo {
-  width: 180px;
-  cursor: pointer;
-}
-
-.links__sections,
-.links__social {
-  list-style-type: none;
-  @include flex-row;
-  gap: 20px;
+  &__sections,
+  &__social {
+    list-style-type: none;
+    @include flex-row;
+    gap: 20px;
+  }
 }
 
 .sections__item {
@@ -103,84 +125,66 @@ const scrollUp = () => {
   &:hover {
     transform: scale(1.1);
   }
-}
 
-.social__item--linkedin {
-  @extend .social__item;
-  background: url('../assets/in-icon.png');
-}
-
-.social__item--facebook {
-  @extend .social__item;
-  background: url('../assets/faceb-icon.png');
-}
-
-.social__item--twitter {
-  @extend .social__item;
-  background: url('../assets/tw-icon.png');
-}
-
-.footer__contacts {
-  @include flex-row;
-  align-items: start;
-  margin-top: 66px;
-  gap: 184px;
-}
-
-.contacts__info {
-  width: 300px;
-
-  .info__title {
-    background: $accent-color;
-    color: $text-color;
-    border-radius: 7px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 26px;
-    width: 126px;
-    padding: 0 7px;
-    margin-bottom: 27px;
+  &--linkedin {
+    @extend .social__item;
+    background: url('../assets/in-icon.png');
   }
 
-  .info__paragraph {
-    font-size: 18px;
-    margin-top: 20px;
+  &--facebook {
+    @extend .social__item;
+    background: url('../assets/faceb-icon.png');
+  }
+
+  &--twitter {
+    @extend .social__item;
+    background: url('../assets/tw-icon.png');
   }
 }
 
-.contacts__sub {
-  @include flex-row;
-  gap: 20px;
-  width: 634px;
-  height: 184px;
-  background: #292a32;
-  border-radius: 14px;
-  padding: 58px 40px;
+.contacts {
+  &__info {
+    width: 300px;
 
-  .sub__input {
-    padding: 22px 35px;
-    color: $bg-color;
-    gap: 10px;
-    font-size: 18px;
-    width: 285px;
-    height: 67px;
+    .info__title {
+      background: $accent-color;
+      color: $text-color;
+      border-radius: 7px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      width: 126px;
+      padding: 0 7px;
+      margin-bottom: 27px;
+    }
+
+    .info__paragraph {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+
+  &__sub {
+    @include flex-row;
+    gap: 20px;
+    width: 634px;
+    height: 184px;
     background: #292a32;
-    border: 1px solid #ffffff;
     border-radius: 14px;
+    padding: 58px 40px;
+
+    .sub__input {
+      padding: 22px 35px;
+      color: $bg-color;
+      gap: 10px;
+      font-size: 18px;
+      width: 285px;
+      height: 67px;
+      background: #292a32;
+      border: 1px solid #ffffff;
+      border-radius: 14px;
+    }
   }
-}
-
-.footer__separator {
-  width: 100%;
-  height: 1px;
-  background-color: $bg-color;
-  margin: 50px 0;
-}
-
-.footer__rights {
-  @include flex-row;
-  width: 100%;
-  justify-content: space-between;
 }
 
 .rights__item {

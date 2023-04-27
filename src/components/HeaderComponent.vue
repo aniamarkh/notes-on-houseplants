@@ -1,12 +1,7 @@
 <script setup>
-import { ref, unref, toRef, onMounted, onUnmounted } from 'vue';
+import { ref, toRef, onMounted, onUnmounted } from 'vue';
 import Button from './ButtonComponent.vue';
 import pageNavItems from '../data/pageNavItems.js';
-
-const selectedNavItem = ref(pageNavItems[0].title);
-const updateSelectedNavItem = (itemTitle) => {
-  selectedNavItem.value = itemTitle;
-};
 
 const scrolled = ref(false);
 const checkScrollPosition = () => {
@@ -16,7 +11,6 @@ const isScrolled = toRef(scrolled, 'value');
 
 const scrollUp = () => {
   window.scrollTo(0, 0);
-  selectedNavItem.value = pageNavItems[0].title;
 };
 
 onMounted(() => {
@@ -32,12 +26,7 @@ onUnmounted(() => {
     <img class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
     <nav class="header__nav">
       <ul class="nav__list">
-        <li
-          v-for="(item, index) of pageNavItems"
-          :key="index"
-          :class="item.title === unref(selectedNavItem) ? 'nav__item--selected' : 'nav__item'"
-          @click="updateSelectedNavItem(item.title)"
-        >
+        <li v-for="(item, index) of pageNavItems" :key="index" class="nav__item">
           <a :href="item.href">{{ item.title }}</a>
         </li>
       </ul>
@@ -61,20 +50,20 @@ onUnmounted(() => {
   transition: all 0.3s ease-in-out;
   z-index: 2;
 
-  #{&}__logo {
+  &__logo {
     cursor: pointer;
   }
 
-  #{&}__nav {
+  &__nav {
     @include flex-row;
     gap: 40px;
   }
-}
 
-.header--fixed {
-  @extend .header;
-  padding-top: 0;
-  height: 80px;
+  &--fixed {
+    @extend .header;
+    padding-top: 0;
+    height: 80px;
+  }
 }
 
 .nav__btn {
@@ -119,25 +108,6 @@ onUnmounted(() => {
   &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
-}
-
-.nav__item--selected {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 20px;
-
-  &::after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 25px;
-    bottom: 0;
-    left: 0;
-    border-radius: 4px;
-    background-color: $accent-color;
   }
 }
 </style>
