@@ -24,11 +24,11 @@ import processCardsData from '../../data/processCards';
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '../../style.scss';
 
 .section-title {
-  max-width: 750px;
+  max-width: 750px !important;
 }
 
 .process__cards {
@@ -39,7 +39,13 @@ import processCardsData from '../../data/processCards';
 
 @media (max-width: 900px) {
   .process__title {
-    margin: 60px 0 30px !important;
+    margin: 60px 0 40px !important;
+
+    .section-title__heading {
+      width: 230px !important;
+      text-align: center;
+      white-space: normal;
+    }
   }
 
   .process__cards {

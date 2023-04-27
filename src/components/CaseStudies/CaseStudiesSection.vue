@@ -50,7 +50,7 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
 }
 
 .case-studies__title {
-  max-width: 850px;
+  max-width: 850px !important;
 }
 
 @media (max-width: 900px) {

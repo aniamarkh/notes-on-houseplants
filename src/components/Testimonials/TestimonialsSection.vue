@@ -16,7 +16,7 @@ import SwitcherComponent from './SwitcherComponent.vue';
 
 <style scoped lang="scss">
 .testimonials__title {
-  margin-top: 100px;
-  max-width: 780px;
+  margin-top: 100px !important;
+  max-width: 780px !important;
 }
 </style>

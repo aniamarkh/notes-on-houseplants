@@ -48,7 +48,7 @@ defineProps({
 @media (max-width: 900px) {
   .section-title {
     display: block;
-    margin: 60px 0 40px;
+    margin: 60px auto 40px;
     height: auto;
     padding: 0 20px;
 

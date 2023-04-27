@@ -109,6 +109,7 @@ const handleButton = () => {
   .hero {
     margin-top: 95px;
     padding: 0 20px;
+    gap: 62px;
     &__img {
       display: none;
     }
@@ -131,40 +132,6 @@ const handleButton = () => {
       width: 100%;
     }
   }
-  // .hero {
-  //   max-width: 100%;
-  //   margin-top: 95px;
-  //   gap: 68px;
-  //   height: 800px;
-
-  //   &__top {
-  //     flex-wrap: wrap;
-  //     width: 100%;
-  //   }
-
-  //   &__text-block {
-  //     width: 100%;
-  //     height: inherit;
-  //     @include flex-column;
-  //   }
-
-  //   &__img {
-  //     display: none;
-  //   }
-
-  //   &__img--mobile {
-  //     display: block;
-  //     width: 360px;
-  //     height: 310px;
-  //     margin: 10px auto;
-  //   }
-  // }
-
-  // .button__link {
-  //   font-size: 20px;
-  //   line-height: 28px;
-  //   text-align: center;
-  // }
 
   .text-block__title {
     font-size: 43px;
@@ -175,20 +142,20 @@ const handleButton = () => {
     width: 100%;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 14px;
+    margin-top: 10px;
   }
 
   .hero__logos {
-    width: 100%;
+    width: 200%;
     @include flex-row;
-    flex-wrap: wrap;
-    gap: 8px 38px;
-    justify-content: center;
-    height: auto;
+    gap: 27px;
+    align-items: flex-start;
+    height: 115px;
   }
 
   .logos__item {
     mix-blend-mode: luminosity;
+    margin-left: 10px;
   }
 }
 </style>

@@ -61,7 +61,7 @@ const handleChange = (event) => {
 @import '../../style.scss';
 
 .section-title {
-  max-width: 600px;
+  max-width: 600px !important;
 }
 
 .contact-us {

@@ -22,6 +22,7 @@ const toggleCards = () => {
 <template>
   <section id="team" class="team">
     <SectionTitle
+      class="team__title"
       heading="Team"
       subheading="Meet the skilled and experienced team behind our successful digital marketing strategies"
     />
@@ -35,18 +36,20 @@ const toggleCards = () => {
         :img="card.photo"
       />
     </div>
-    <ButtonComponent color="black" @click="toggleCards">{{ buttonMessage }}</ButtonComponent>
+    <ButtonComponent class="team__button" color="black" @click="toggleCards">{{
+      buttonMessage
+    }}</ButtonComponent>
   </section>
 </template>
 
 <style scoped lang="scss">
 @import '../../style.scss';
 
-.team-section {
+.team {
   position: relative;
 }
 .section-title {
-  max-width: 650px;
+  max-width: 650px !important;
 }
 
 .team__cards {
@@ -73,5 +76,32 @@ const toggleCards = () => {
 .button--black {
   padding: 20px 76px;
   float: right;
+}
+
+@media (max-width: 900px) {
+  .team {
+    @include flex-column;
+  }
+  .team__title {
+    margin: 60px auto 32px;
+  }
+  .team__cards {
+    gap: 30px;
+    padding: 10px 20px;
+    justify-content: center;
+  }
+
+  .team__cards--collapsed {
+    height: 1350px;
+  }
+
+  .team__cards--expanded {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .team__button {
+    margin: 0 20px;
+  }
 }
 </style>

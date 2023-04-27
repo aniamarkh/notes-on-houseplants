@@ -100,4 +100,37 @@ const openLink = () => {
     transform: scale(1.05);
   }
 }
+
+@media (max-width: 900px) {
+  .team-card {
+    min-height: auto;
+    padding: 38px 50px;
+  }
+  .card__member-info {
+    font-size: 18px;
+    line-height: 23px;
+
+    .member-info__name {
+      margin-bottom: 5px;
+    }
+
+    .member-info__role {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .card__desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card__separator {
+    width: auto;
+    margin: 20px 0;
+  }
+
+  .card__icon {
+    right: 47px;
+  }
+}
 </style>

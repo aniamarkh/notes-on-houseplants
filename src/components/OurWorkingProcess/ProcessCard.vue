@@ -168,7 +168,7 @@ const toggleCard = () => {
   .process-card--close {
     width: 100%;
     padding: 30px;
-    height: 98px;
+    height: 102px;
 
     .card__desc {
       margin-top: 20px;
@@ -186,6 +186,7 @@ const toggleCard = () => {
   }
 
   .card__top {
+    height: 50px;
     .card__title {
       gap: 33px;
       font-size: 18px;

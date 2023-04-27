@@ -127,6 +127,7 @@ const isBtnDisabled = (btn) => {
 
 .switcher__pagination {
   @include flex-row;
+  align-items: center;
   height: 40px;
   width: 580px;
   gap: 186px;
