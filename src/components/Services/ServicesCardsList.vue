@@ -36,7 +36,6 @@ import cardsData from '../../data/servicesCards';
 <style scoped lang="scss">
 @import '../../_config.scss';
 .services__cards {
-  width: auto;
   @include flex-row;
   flex-wrap: wrap;
   gap: 40px;
@@ -52,35 +51,28 @@ import cardsData from '../../data/servicesCards';
   height: 347px;
   background: $grey;
   border-radius: 45px;
-}
 
-.proposal-card__img {
-  width: 359px;
-}
-
-.proposal-card__text {
-  height: 227px;
-  width: 480px;
-  gap: 26px;
-
-  .text__title {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 38px;
+  .proposal-card__img {
+    width: 359px;
   }
 
-  .text__paragraph {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    margin: 26px 0;
-  }
-}
+  .proposal-card__text {
+    height: 227px;
+    width: 480px;
+    gap: 26px;
 
-@media (max-width: 500px) {
-  .services__cards {
-    width: 100%;
-    gap: 30px;
+    .text__title {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 38px;
+    }
+
+    .text__paragraph {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      margin: 26px 0;
+    }
   }
 }
 
@@ -92,7 +84,6 @@ import cardsData from '../../data/servicesCards';
 
   .services__cards {
     width: 100%;
-    padding: 0 20px;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -103,26 +94,42 @@ import cardsData from '../../data/servicesCards';
     padding: 50px;
     width: 390px;
     height: 370px;
-  }
 
-  .proposal-card__img {
-    display: none;
-  }
-
-  .proposal-card__text {
-    height: 270px;
-    width: auto;
-
-    .text__title {
-      font-size: 26px;
-      line-height: 33px;
+    .proposal-card__img {
+      display: none;
     }
 
-    .text__paragraph {
-      font-size: 16px;
-      line-height: 24px;
-      margin: 20px 0;
+    .proposal-card__text {
+      height: 270px;
+
+      .text__title {
+        font-size: 26px;
+        line-height: 33px;
+      }
+
+      .text__paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 20px 0;
+      }
     }
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1439px) {
+  .services__cards {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .services__proposal-card {
+    width: 100%;
+    margin: 70px auto 0;
+    padding: 50px;
+    gap: 0;
+    justify-content: space-between;
   }
 }
 </style>

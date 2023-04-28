@@ -16,7 +16,7 @@ const updateSelectedOption = (value) => {
 <template>
   <Header :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
   <Hero :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
-  <!-- <SectionLayout
+  <SectionLayout
     v-for="(section, index) of pageSectionsData"
     :key="index"
     :section-name="section.name"
@@ -25,51 +25,6 @@ const updateSelectedOption = (value) => {
     :dynamic-component="section.component"
   >
   </SectionLayout>
-  <FormsWrapper :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
+  <!-- <FormsWrapper :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
   <FooterSection /> -->
 </template>
-
-<style lang="scss">
-@import '../_config.scss';
-
-.services__title {
-  max-width: 800px !important;
-}
-
-.case-studies__title {
-  max-width: 850px !important;
-}
-
-.process__title {
-  max-width: 750px !important;
-}
-
-.team__title {
-  max-width: 650px !important;
-}
-
-.testimonials__title {
-  margin-top: 100px !important;
-  max-width: 780px !important;
-}
-
-@media (max-width: 900px) {
-  .process__title {
-    margin: 60px 0 40px !important;
-
-    .section-title__heading {
-      width: 230px !important;
-      text-align: center;
-      white-space: normal;
-    }
-  }
-
-  .team__title {
-    margin: 60px auto 32px;
-  }
-
-  .testimonials__title {
-    margin: 56px 0 40px !important;
-  }
-}
-</style>
