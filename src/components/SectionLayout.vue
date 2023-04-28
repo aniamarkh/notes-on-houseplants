@@ -64,6 +64,7 @@ const components = {
 
 .process__title {
   max-width: 750px !important;
+  margin: 140px 0 70px !important;
 }
 
 .team__title {
@@ -77,15 +78,15 @@ const components = {
 
 @media (max-width: 900px) {
   .services__title {
-    margin: 30px 0 40px !important;
+    margin: 30px auto 40px !important;
   }
 
   .case-studies__title {
-    margin: 60px 0 20px !important;
+    margin: 60px auto 20px !important;
   }
 
   .process__title {
-    margin: 60px 0 40px !important;
+    margin: 60px auto 30px !important;
 
     .section-title__heading {
       width: 230px !important;

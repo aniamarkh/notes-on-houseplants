@@ -20,6 +20,7 @@ import processCardsData from '../../data/processCards';
 @import '../../_config.scss';
 
 .process__cards {
+  padding: 10px 0;
   width: 100%;
   @include flex-column;
   gap: 30px;
@@ -27,8 +28,16 @@ import processCardsData from '../../data/processCards';
 
 @media (max-width: 900px) {
   .process__cards {
-    padding: 0 20px;
-    gap: 20px;
+    gap: 18px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 1439px) {
+  .process__cards {
+    gap: 18px;
+    padding: 10px 0;
+    align-items: center;
   }
 }
 </style>

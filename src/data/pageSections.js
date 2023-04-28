@@ -13,12 +13,12 @@ const pageSectionsData = [
       'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies',
     component: 'CaseStudiesCardsList',
   },
-  // {
-  //   name: 'process',
-  //   heading: 'Our Working Process',
-  //   subheading: 'Step-by-Step Guide to Achieving Your Business Goals',
-  //   component: 'ProcessCardsList',
-  // },
+  {
+    name: 'process',
+    heading: 'Our Working Process',
+    subheading: 'Step-by-Step Guide to Achieving Your Business Goals',
+    component: 'ProcessCardsList',
+  },
   // {
   //   name: 'team',
   //   heading: 'Team',

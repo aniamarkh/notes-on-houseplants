@@ -144,9 +144,9 @@ const toggleCard = () => {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1439px) {
   .process-card--open {
-    width: 100%;
+    width: 80%;
     padding: 30px;
     height: auto;
 
@@ -166,7 +166,7 @@ const toggleCard = () => {
   }
 
   .process-card--close {
-    width: 100%;
+    width: 80%;
     padding: 30px;
     height: 102px;
 
@@ -201,6 +201,16 @@ const toggleCard = () => {
 
   .card__separator {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .process-card--open {
+    width: 100%;
+  }
+
+  .process-card--close {
+    width: 100%;
   }
 }
 </style>

@@ -51,7 +51,6 @@ defineProps({
     margin: 60px auto 40px;
     height: auto;
     padding: 0 20px;
-    max-width: 100%;
     &__heading {
       font-size: 36px;
       line-height: 46px;
