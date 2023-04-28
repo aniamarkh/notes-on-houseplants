@@ -31,7 +31,7 @@ const scrollUp = () => {
       </div>
       <div class="contacts__sub">
         <input class="sub__input" type="email" placeholder="Email" />
-        <Button color="green">Subscribe to news</Button>
+        <Button class="sub__button" color="green">Subscribe to news</Button>
       </div>
     </div>
     <div class="footer__separator"></div>
@@ -286,6 +286,10 @@ const scrollUp = () => {
         font-size: 16px;
         line-height: 24px;
         padding: 18px 20px;
+      }
+
+      .sub__button {
+        width: 100%;
       }
     }
   }
