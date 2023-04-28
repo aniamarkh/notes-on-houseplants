@@ -1,44 +1,36 @@
 <script setup>
-import SectionTitle from '../SectionTitle.vue';
 import ServiceCard from './ServiceCard.vue';
 import ButtonComponent from '../ButtonComponent.vue';
 import cardsData from '../../data/servicesCards';
 </script>
 
 <template>
-  <section id="services" class="services">
-    <SectionTitle
-      class="services__title"
-      heading="Services"
-      subheading="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
+  <div class="services__cards">
+    <ServiceCard
+      v-for="(card, index) of cardsData"
+      :key="index"
+      :color="card.color"
+      :img="card.imgSrc"
+    >
+      <template #first>{{ card.firstLine }}</template>
+      <template #second>{{ card.secondLine }} </template>
+    </ServiceCard>
+  </div>
+  <div class="services__proposal-card">
+    <div class="proposal-card__text">
+      <h3 class="text__title">Let’s make things happen</h3>
+      <p class="text__paragraph">
+        Contact us today to learn more about how our digital marketing services can help your
+        business grow and succeed online.
+      </p>
+      <ButtonComponent color="black">Get your free proposal</ButtonComponent>
+    </div>
+    <img
+      class="proposal-card__img"
+      src="/assets/services-cards/services-Illustration.png"
+      alt="proposal illustration"
     />
-    <div class="services__cards">
-      <ServiceCard
-        v-for="(card, index) of cardsData"
-        :key="index"
-        :color="card.color"
-        :img="card.imgSrc"
-      >
-        <template #first>{{ card.firstLine }}</template>
-        <template #second>{{ card.secondLine }} </template>
-      </ServiceCard>
-    </div>
-    <div class="services__proposal-card">
-      <div class="proposal-card__text">
-        <h3 class="text__title">Let’s make things happen</h3>
-        <p class="text__paragraph">
-          Contact us today to learn more about how our digital marketing services can help your
-          business grow and succeed online.
-        </p>
-        <ButtonComponent color="black">Get your free proposal</ButtonComponent>
-      </div>
-      <img
-        class="proposal-card__img"
-        src="/assets/services-cards/services-Illustration.png"
-        alt="proposal illustration"
-      />
-    </div>
-  </section>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -85,10 +77,6 @@ import cardsData from '../../data/servicesCards';
   }
 }
 
-.services__title {
-  max-width: 800px !important;
-}
-
 @media (max-width: 500px) {
   .services__cards {
     width: 100%;
@@ -101,6 +89,7 @@ import cardsData from '../../data/servicesCards';
     @include flex-column;
     align-items: center;
   }
+
   .services__cards {
     width: 100%;
     padding: 0 20px;
@@ -108,8 +97,9 @@ import cardsData from '../../data/servicesCards';
     justify-content: center;
     gap: 30px;
   }
+
   .services__proposal-card {
-    margin: 70px 0 0;
+    margin: 70px auto 0;
     padding: 50px;
     width: 390px;
     height: 370px;

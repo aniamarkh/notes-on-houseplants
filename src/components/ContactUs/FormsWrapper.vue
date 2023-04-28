@@ -1,5 +1,4 @@
 <script setup>
-// import Button from '../ButtonComponent.vue';
 import Form from './DynamicForm.vue';
 import SectionTitle from '../SectionTitle.vue';
 defineProps({
@@ -60,7 +59,7 @@ const handleChange = (event) => {
 <style scoped lang="scss">
 @import '../../style.scss';
 
-.section-title {
+.contact-us__title {
   max-width: 600px !important;
 }
 

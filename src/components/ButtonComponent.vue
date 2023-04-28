@@ -29,6 +29,7 @@ const buttonClass = computed(() => {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
+  width: max-content;
   &:hover {
     color: $text-color;
     background-color: $accent-color;

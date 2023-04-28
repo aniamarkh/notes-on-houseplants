@@ -1,8 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue';
-import SectionTitle from '../SectionTitle.vue';
-import TeamMemberCard from './TeamMemberCard.vue';
 import teamMembersCards from '../../data/teamMembersCards';
+import TeamMemberCard from './TeamMemberCard.vue';
 import ButtonComponent from '../ButtonComponent.vue';
 
 const isCollapsed = ref(true);
@@ -20,36 +19,28 @@ const toggleCards = () => {
 </script>
 
 <template>
-  <section id="team" class="team">
-    <SectionTitle
-      class="team__title"
-      heading="Team"
-      subheading="Meet the skilled and experienced team behind our successful digital marketing strategies"
+  <div :class="cardsListClass">
+    <TeamMemberCard
+      v-for="(card, index) of teamMembersCards"
+      :key="index"
+      :name="card.name"
+      :role="card.role"
+      :desc="card.desc"
+      :img="card.photo"
     />
-    <div :class="cardsListClass">
-      <TeamMemberCard
-        v-for="(card, index) of teamMembersCards"
-        :key="index"
-        :name="card.name"
-        :role="card.role"
-        :desc="card.desc"
-        :img="card.photo"
-      />
-    </div>
-    <ButtonComponent class="team__button" color="black" @click="toggleCards">{{
-      buttonMessage
-    }}</ButtonComponent>
-  </section>
+  </div>
+  <ButtonComponent class="team__button" color="black" @click="toggleCards">{{
+    buttonMessage
+  }}</ButtonComponent>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '../../style.scss';
-
-.team {
-  position: relative;
+.button {
+  width: 200px !important;
 }
-.section-title {
-  max-width: 650px !important;
+.team {
+  @include flex-column;
 }
 
 .team__cards {
@@ -73,19 +64,10 @@ const toggleCards = () => {
   height: 1100px;
 }
 
-.button--black {
-  padding: 20px 76px;
-  float: right;
-}
-
 @media (max-width: 900px) {
   .team {
-    @include flex-column;
+    align-items: center;
     width: 100%;
-  }
-
-  .team__title {
-    margin: 60px auto 32px;
   }
 
   .team__cards {
@@ -93,20 +75,15 @@ const toggleCards = () => {
     align-items: center;
     flex-wrap: nowrap;
     gap: 30px;
-    padding: 10px 20px;
   }
 
   .team__cards--collapsed {
-    height: 1350px;
+    height: 1340px;
   }
 
   .team__cards--expanded {
     height: auto;
     margin-bottom: 20px;
-  }
-
-  .team__button {
-    margin: 0 20px;
   }
 }
 </style>
