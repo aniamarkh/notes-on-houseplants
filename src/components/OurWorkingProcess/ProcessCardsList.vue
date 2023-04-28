@@ -17,7 +17,7 @@ import processCardsData from '../../data/processCards';
 </template>
 
 <style lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 
 .process__cards {
   width: 100%;

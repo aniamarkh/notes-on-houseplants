@@ -36,7 +36,7 @@ const serviceCardClass = computed(() => {
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 
 .service-card {
   width: 600px;

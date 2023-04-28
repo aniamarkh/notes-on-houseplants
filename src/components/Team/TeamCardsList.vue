@@ -35,7 +35,7 @@ const toggleCards = () => {
 </template>
 
 <style lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 .button {
   width: 200px !important;
 }

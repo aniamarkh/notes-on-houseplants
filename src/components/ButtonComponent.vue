@@ -13,11 +13,19 @@ const buttonClass = computed(() => {
 </script>
 
 <template>
-  <button :class="buttonClass"><slot></slot></button>
+  <div class="button__wrapper">
+    <button :class="buttonClass"><slot></slot></button>
+  </div>
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../_config.scss';
+
+.button__wrapper {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
 
 .button {
   all: unset;
@@ -29,7 +37,8 @@ const buttonClass = computed(() => {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
-  width: max-content;
+  width: inherit;
+
   &:hover {
     color: $text-color;
     background-color: $accent-color;

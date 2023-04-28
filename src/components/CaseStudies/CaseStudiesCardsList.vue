@@ -22,7 +22,7 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 
 .case-studies__cards {
   @include flex-row;

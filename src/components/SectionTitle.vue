@@ -19,7 +19,7 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../_config.scss';
 
 .section-title {
   @include flex-row;

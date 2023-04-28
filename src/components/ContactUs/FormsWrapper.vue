@@ -57,7 +57,7 @@ const handleChange = (event) => {
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 
 .contact-us__title {
   max-width: 600px !important;

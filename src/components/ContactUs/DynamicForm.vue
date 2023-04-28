@@ -43,7 +43,7 @@ const buttonText = computed(() =>
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 .button__text {
   text-align: center;
 }

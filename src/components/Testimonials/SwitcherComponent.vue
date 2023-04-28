@@ -95,7 +95,7 @@ const isBtnDisabled = (btn) => {
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 @mixin background-no-repeat {
   background-repeat: no-repeat;
   background-position: center left;

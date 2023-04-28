@@ -10,7 +10,7 @@ import LinkComponent from '../LinkComponent.vue';
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 .case-card {
   width: 300px;
   @include flex-column;

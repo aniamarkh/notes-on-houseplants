@@ -34,7 +34,7 @@ import cardsData from '../../data/servicesCards';
 </template>
 
 <style scoped lang="scss">
-@import '../../style.scss';
+@import '../../_config.scss';
 .services__cards {
   width: auto;
   @include flex-row;
