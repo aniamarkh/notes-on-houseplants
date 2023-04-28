@@ -16,7 +16,7 @@ const updateSelectedOption = (value) => {
 <template>
   <Header :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
   <Hero :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
-  <SectionLayout
+  <!-- <SectionLayout
     v-for="(section, index) of pageSectionsData"
     :key="index"
     :section-name="section.name"
@@ -26,11 +26,11 @@ const updateSelectedOption = (value) => {
   >
   </SectionLayout>
   <FormsWrapper :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
-  <FooterSection />
+  <FooterSection /> -->
 </template>
 
 <style lang="scss">
-@import '../style.scss';
+@import '../_config.scss';
 
 .services__title {
   max-width: 800px !important;

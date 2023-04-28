@@ -44,7 +44,7 @@ onUnmounted(() => {
           <a :href="item.href">{{ item.title }}</a>
         </li>
       </ul>
-      <Button color="white" @click="handleQuoteRequest">
+      <Button class="header__button" color="white" @click="handleQuoteRequest">
         <a ref="quoteLink" class="button__link" href="#contact-us">Request a quote</a>
       </Button>
     </nav>
@@ -52,19 +52,20 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../_config.scss';
 
 .header {
-  height: 135px;
-  padding-top: 55px;
-  background-color: $bg-color;
-  @include flex-row;
-  gap: 160px;
-  align-items: center;
+  z-index: 2;
   position: fixed;
   top: 0;
+  height: 135px;
+  width: 1240px;
+  padding: 55px 0 0;
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-color;
   transition: all 0.3s ease-in-out;
-  z-index: 2;
 
   &__logo {
     cursor: pointer;
@@ -75,6 +76,38 @@ onUnmounted(() => {
     @include flex-row;
     align-items: center;
     gap: 40px;
+
+    .nav__list {
+      list-style-type: none;
+      @include flex-row;
+      gap: 20px;
+
+      .nav__item {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        font-size: 20px;
+
+        &::after {
+          z-index: -1;
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 25px;
+          bottom: 0;
+          left: 0;
+          background-color: $accent-color;
+          border-radius: 4px;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-in-out;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
   }
 
   &--fixed {
@@ -84,59 +117,52 @@ onUnmounted(() => {
   }
 }
 
-.nav__btn {
-  border-radius: 14px;
-  padding: 20px 35px 20px 35px;
-  border: 1px solid #191a23;
-  margin-right: 101px;
-  transition: all 0.4s;
-
-  &:hover {
-    color: $bg-color;
-    background-color: $text-color;
-  }
-}
-
 .button__link {
   font-size: 20px;
 }
 
-.nav__list {
-  list-style-type: none;
-  @include flex-row;
-  gap: 20px;
-}
+@media (max-width: 1439px) {
+  .header {
+    height: 82px;
+    width: 100vw;
+    padding: 0 20px;
+    justify-content: space-between;
 
-.nav__item {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 20px;
+    &__nav {
+      gap: 10px;
+      .nav__list {
+        gap: 10px;
 
-  &::after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 25px;
-    bottom: 0;
-    left: 0;
-    background-color: $accent-color;
-    border-radius: 4px;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-in-out;
+        .nav__item a {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__logo {
+      width: 144px;
+    }
+
+    &--fixed {
+      height: 60px;
+    }
   }
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+
+  .button__link {
+    font-size: 16px;
+  }
+
+  .header__button:deep(.button),
+  .header__button:deep(.button--white) {
+    padding: 10px 20px;
   }
 }
 
 @media (max-width: 900px) {
   .header {
-    width: 100vw;
     height: 82px;
+    left: 0px;
+    box-sizing: border-box;
     padding: 0 20px;
 
     &__nav {

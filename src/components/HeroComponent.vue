@@ -32,7 +32,7 @@ const handleButton = () => {
           Our digital marketing agency helps businesses grow and succeed online through a range of
           services including SEO, PPC, social media marketing, and content creation.
         </p>
-        <Button color="black" @click="handleButton">
+        <Button class="hero__button" color="black" @click="handleButton">
           <a ref="sayHiLink" class="button__link" href="#contact-us">Book a consultation</a>
         </Button>
       </div>
@@ -50,7 +50,7 @@ const handleButton = () => {
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../_config.scss';
 .hero {
   width: 100%;
   @include flex-column;
@@ -61,7 +61,6 @@ const handleButton = () => {
     @include flex-row;
     align-items: flex-start;
     gap: 108px;
-    width: 100%;
   }
 
   &__text-block {
@@ -105,10 +104,41 @@ const handleButton = () => {
   font-size: 20px;
 }
 
+@media (max-width: 1439px) {
+  .hero {
+    padding: 0 20px;
+    margin-top: 95px;
+    gap: 62px;
+
+    &__top {
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    &__text-block {
+      width: 50%;
+      height: auto;
+      @include flex-column;
+
+      .text-block__paragraph {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 10px;
+      }
+    }
+
+    &__img {
+      width: 50%;
+      margin-right: 20px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     margin-top: 95px;
-    padding: 0 20px;
     gap: 62px;
     &__img {
       display: none;
@@ -146,16 +176,19 @@ const handleButton = () => {
   }
 
   .hero__logos {
-    width: 200%;
-    @include flex-row;
-    gap: 27px;
     align-items: flex-start;
-    height: 115px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
   }
 
   .logos__item {
     mix-blend-mode: luminosity;
     margin-left: 10px;
+  }
+
+  .button__wrapper {
+    width: 100%;
   }
 }
 </style>
