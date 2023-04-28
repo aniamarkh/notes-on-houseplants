@@ -15,7 +15,7 @@ const quoteLink = ref(null);
 const handleQuoteRequest = () => {
   emit('update:selected-option', 'getAQuote');
   quoteLink.value.click();
-  if (navClass.value === 'header__nav') {
+  if (navClass.value === 'header__nav header__nav--open') {
     toggleNav();
   }
 };
@@ -35,7 +35,7 @@ const toggleNav = () => {
   isOpenNav.value = !isOpenNav.value;
 };
 const navClass = computed(() => {
-  return isOpenNav.value ? 'header__nav' : 'header__nav--closed';
+  return isOpenNav.value ? 'header__nav header__nav--open' : 'header__nav';
 });
 
 onMounted(() => {
@@ -56,7 +56,7 @@ onUnmounted(() => {
           v-for="(item, index) of pageNavItems"
           :key="index"
           class="nav__item"
-          @click="if (navClass === 'header__nav') toggleNav();"
+          @click="if (navClass === 'header__nav header__nav--open') toggleNav();"
         >
           <a :href="item.href">{{ item.title }}</a>
         </li>
@@ -190,10 +190,12 @@ onUnmounted(() => {
     width: 80%;
     height: 100vh;
     top: 0;
-    right: 0;
+    right: -900px;
+    opacity: 0;
     padding: 50px 30px;
     gap: 40px;
     @include transition-ease;
+
     .nav__list {
       @include flex-column;
       align-items: flex-start;
@@ -220,10 +222,10 @@ onUnmounted(() => {
       @include nav-mobile;
     }
 
-    &__nav--closed {
+    &__nav--open {
       @include nav-mobile;
-      right: -900px;
-      opacity: 0;
+      right: 0;
+      opacity: 1;
     }
 
     .burger {
