@@ -76,11 +76,12 @@ const components = {
 }
 
 @media (max-width: 900px) {
-  .section {
-    align-items: center;
-  }
   .services__title {
     margin: 30px 0 40px !important;
+  }
+
+  .case-studies__title {
+    margin: 60px 0 20px !important;
   }
 
   .process__title {

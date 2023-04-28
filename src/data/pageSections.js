@@ -6,13 +6,13 @@ const pageSectionsData = [
       'At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:',
     component: 'ServicesCardsList',
   },
-  // {
-  //   name: 'case-studies',
-  //   heading: 'Case Studies',
-  //   subheading:
-  //     'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies',
-  //   component: 'CaseStudiesCardsList',
-  // },
+  {
+    name: 'case-studies',
+    heading: 'Case Studies',
+    subheading:
+      'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies',
+    component: 'CaseStudiesCardsList',
+  },
   // {
   //   name: 'process',
   //   heading: 'Our Working Process',

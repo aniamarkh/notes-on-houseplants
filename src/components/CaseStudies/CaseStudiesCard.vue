@@ -32,7 +32,7 @@ import LinkComponent from '../LinkComponent.vue';
   width: 155px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .case-card {
     width: 350px;
     height: 250px;

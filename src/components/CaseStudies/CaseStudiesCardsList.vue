@@ -26,7 +26,6 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
 
 .case-studies__cards {
   @include flex-row;
-  align-items: flex-start;
   gap: 64px;
   padding: 70px 60px;
   width: 1234px;
@@ -41,13 +40,13 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
   background: $bg-color;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .case-studies__cards {
-    align-items: center;
+    align-items: flex-start;
     background: none;
     width: auto;
     overflow: scroll;
-    padding: 0 20px;
+    padding: 0;
     gap: 20px;
     height: auto;
     border-radius: 0;
