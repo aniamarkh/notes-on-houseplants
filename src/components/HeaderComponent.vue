@@ -15,6 +15,9 @@ const quoteLink = ref(null);
 const handleQuoteRequest = () => {
   emit('update:selected-option', 'getAQuote');
   quoteLink.value.click();
+  if (navClass.value === 'header__nav') {
+    toggleNav();
+  }
 };
 
 const scrolled = ref(false);
@@ -49,7 +52,12 @@ onUnmounted(() => {
     <HamburgerNav :is-open="isOpenNav" class="header__burger" @click="toggleNav" />
     <nav :class="navClass">
       <ul class="nav__list">
-        <li v-for="(item, index) of pageNavItems" :key="index" class="nav__item">
+        <li
+          v-for="(item, index) of pageNavItems"
+          :key="index"
+          class="nav__item"
+          @click="if (navClass === 'header__nav') toggleNav();"
+        >
           <a :href="item.href">{{ item.title }}</a>
         </li>
       </ul>
@@ -179,7 +187,7 @@ onUnmounted(() => {
     align-items: flex-start;
     position: absolute;
     background-color: $bg-color;
-    width: 430px;
+    width: 80%;
     height: 100vh;
     top: 0;
     right: 0;
@@ -214,7 +222,7 @@ onUnmounted(() => {
 
     &__nav--closed {
       @include nav-mobile;
-      right: -430px;
+      right: -900px;
       opacity: 0;
     }
 
