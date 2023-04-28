@@ -1,6 +1,7 @@
 <script setup>
-import { ref, toRef, onMounted, onUnmounted } from 'vue';
+import { ref, computed, toRef, onMounted, onUnmounted } from 'vue';
 import Button from './ButtonComponent.vue';
+import HamburgerNav from './HamburgerNav.vue';
 import pageNavItems from '../data/pageNavItems.js';
 defineProps({
   selectedOption: {
@@ -8,7 +9,6 @@ defineProps({
     default: 'sayHi',
   },
 });
-
 const emit = defineEmits(['update:selected-option']);
 const quoteLink = ref(null);
 
@@ -27,6 +27,14 @@ const scrollUp = () => {
   window.scrollTo(0, 0);
 };
 
+const isOpenNav = ref(false);
+const toggleNav = () => {
+  isOpenNav.value = !isOpenNav.value;
+};
+const navClass = computed(() => {
+  return isOpenNav.value ? 'header__nav' : 'header__nav--closed';
+});
+
 onMounted(() => {
   window.addEventListener('scroll', checkScrollPosition);
 });
@@ -38,7 +46,8 @@ onUnmounted(() => {
 <template>
   <header :class="isScrolled ? 'header--fixed' : 'header'">
     <img class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
-    <nav class="header__nav">
+    <HamburgerNav :is-open="isOpenNav" class="header__burger" @click="toggleNav" />
+    <nav :class="navClass">
       <ul class="nav__list">
         <li v-for="(item, index) of pageNavItems" :key="index" class="nav__item">
           <a :href="item.href">{{ item.title }}</a>
@@ -72,7 +81,12 @@ onUnmounted(() => {
     width: 220px;
   }
 
-  &__nav {
+  .burger {
+    display: none;
+  }
+
+  &__nav,
+  &__nav--closed {
     @include flex-row;
     align-items: center;
     gap: 40px;
@@ -128,7 +142,8 @@ onUnmounted(() => {
     padding: 0 20px;
     justify-content: space-between;
 
-    &__nav {
+    &__nav,
+    &__nav--closed {
       gap: 10px;
       .nav__list {
         gap: 10px;
@@ -159,6 +174,34 @@ onUnmounted(() => {
 }
 
 @media (max-width: 900px) {
+  @mixin nav-mobile {
+    @include flex-column;
+    align-items: flex-start;
+    position: absolute;
+    background-color: $bg-color;
+    width: 430px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 50px 30px;
+    gap: 40px;
+    @include transition-ease;
+    .nav__list {
+      @include flex-column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 30px;
+
+      .nav__item {
+        display: inline-block;
+
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
   .header {
     height: 82px;
     left: 0px;
@@ -166,7 +209,18 @@ onUnmounted(() => {
     padding: 0 20px;
 
     &__nav {
-      display: none;
+      @include nav-mobile;
+    }
+
+    &__nav--closed {
+      @include nav-mobile;
+      right: -430px;
+      opacity: 0;
+    }
+
+    .burger {
+      display: block;
+      position: relative;
     }
 
     &__logo {
