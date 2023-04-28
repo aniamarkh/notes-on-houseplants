@@ -26,5 +26,5 @@ const updateSelectedOption = (value) => {
   >
   </SectionLayout>
   <FormsWrapper :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
-  <!-- <FooterSection /> -->
+  <FooterSection />
 </template>

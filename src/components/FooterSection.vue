@@ -198,7 +198,7 @@ const scrollUp = () => {
   width: 18px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1240px) {
   .footer {
     width: 100%;
     height: auto;
@@ -275,11 +275,12 @@ const scrollUp = () => {
     &__sub {
       @include flex-column;
       gap: 20px;
-      width: 100%;
+      width: 390px;
       height: 216px;
       padding: 30px;
       margin-bottom: 50px;
-
+      margin: 0 auto 50px;
+      align-items: center;
       .sub__input {
         width: 100%;
         font-size: 16px;
