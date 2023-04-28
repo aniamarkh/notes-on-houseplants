@@ -19,13 +19,13 @@ const pageSectionsData = [
     subheading: 'Step-by-Step Guide to Achieving Your Business Goals',
     component: 'ProcessCardsList',
   },
-  // {
-  //   name: 'team',
-  //   heading: 'Team',
-  //   subheading:
-  //     'Meet the skilled and experienced team behind our successful digital marketing strategies',
-  //   component: 'TeamCardsList',
-  // },
+  {
+    name: 'team',
+    heading: 'Team',
+    subheading:
+      'Meet the skilled and experienced team behind our successful digital marketing strategies',
+    component: 'TeamCardsList',
+  },
   // {
   //   name: 'testimonials',
   //   heading: 'Testimonials',

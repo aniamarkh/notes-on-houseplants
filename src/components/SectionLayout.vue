@@ -69,6 +69,7 @@ const components = {
 
 .team__title {
   max-width: 650px !important;
+  margin: 130px 0 80px !important;
 }
 
 .testimonials__title {
@@ -96,7 +97,7 @@ const components = {
   }
 
   .team__title {
-    margin: 60px auto 32px;
+    margin: 60px auto 5px !important;
   }
 
   .testimonials__title {
