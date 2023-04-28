@@ -36,7 +36,7 @@ const buttonText = computed(() =>
       placeholder="Message"
       type="text"
     ></textarea>
-    <Button color="black" type="submit">
+    <Button class="form__button" color="black" type="submit">
       <p class="button__text">{{ buttonText }}</p>
     </Button>
   </form>
@@ -46,6 +46,10 @@ const buttonText = computed(() =>
 @import '../../_config.scss';
 .button__text {
   text-align: center;
+}
+
+.button__wrapper {
+  width: 100%;
 }
 
 .form {

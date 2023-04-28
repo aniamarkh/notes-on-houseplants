@@ -25,6 +25,6 @@ const updateSelectedOption = (value) => {
     :dynamic-component="section.component"
   >
   </SectionLayout>
-  <!-- <FormsWrapper :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
-  <FooterSection /> -->
+  <FormsWrapper :selected-option="selectedOption" @update:selected-option="updateSelectedOption" />
+  <!-- <FooterSection /> -->
 </template>

@@ -68,6 +68,10 @@ defineProps({
   max-width: 780px !important;
 }
 
+.contact-us__title {
+  max-width: 600px !important;
+}
+
 @media (max-width: 900px) {
   .section-title {
     display: block;

@@ -59,15 +59,11 @@ const handleChange = (event) => {
 <style scoped lang="scss">
 @import '../../_config.scss';
 
-.contact-us__title {
-  max-width: 600px !important;
-}
-
 .contact-us {
   &__wrapper {
     @include flex-column;
-    gap: 45px;
-    padding: 58px 99px 80px;
+    gap: 38px;
+    padding: 60px 99px 80px;
     width: 1240px;
     height: 773px;
     background-color: $grey;
@@ -86,6 +82,8 @@ const handleChange = (event) => {
 }
 
 .switcher {
+  @include flex-row;
+  align-items: center;
   &__label {
     font-size: 18px;
   }
@@ -102,7 +100,7 @@ const handleChange = (event) => {
       position: relative;
       padding-left: 43px;
       cursor: pointer;
-      line-height: 28px;
+      line-height: 38px;
       display: inline-block;
       color: $text-color;
     }
@@ -143,13 +141,13 @@ const handleChange = (event) => {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .contact-us {
     width: 100%;
-
+    padding: 0 20px;
     &__wrapper {
+      width: 100%;
       margin: 0 auto;
-      width: 90%;
       height: 540px;
       padding: 40px 30px;
       background-image: none;
@@ -166,6 +164,16 @@ const handleChange = (event) => {
     &__label {
       margin-left: 20px;
       font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1439px) {
+  .contact-us {
+    width: 100%;
+    padding: 0 20px;
+    &__wrapper {
+      width: 100%;
     }
   }
 }
