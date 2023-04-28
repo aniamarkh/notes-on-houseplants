@@ -10,7 +10,7 @@ const scrollUp = () => {
 <template>
   <footer class="footer">
     <div class="footer__links">
-      <img class="links__logo" src="../assets/logo-white.png" @click="scrollUp" />
+      <img class="links__logo" src="../assets/footer/logo-white.png" @click="scrollUp" />
       <ul class="links__sections">
         <li v-for="(item, index) of pageNavItems" :key="index" class="sections__item">
           <a :href="item.href">{{ item.title }}</a>
@@ -37,7 +37,7 @@ const scrollUp = () => {
     <div class="footer__separator"></div>
     <div class="footer__rights">
       <a class="rights__item" target="_blank" href="https://github.com/aniamarkh/positivus-landing">
-        <img class="item__icon" src="../assets/github-mark-white.png" alt="github icon" />
+        <img class="item__icon" src="src/assets/footer/github-mark-white.png" alt="github icon" />
         Anna Marchenko @aniamarkh, 2023
       </a>
       <a
@@ -127,17 +127,17 @@ const scrollUp = () => {
 
   &--linkedin {
     @extend .social__item;
-    background: url('../assets/in-icon.png');
+    background: url('src/assets/footer/in-icon.png');
   }
 
   &--facebook {
     @extend .social__item;
-    background: url('../assets/faceb-icon.png');
+    background: url('src/assets/footer/faceb-icon.png');
   }
 
   &--twitter {
     @extend .social__item;
-    background: url('../assets/tw-icon.png');
+    background: url('src/assets/footer/tw-icon.png');
   }
 }
 

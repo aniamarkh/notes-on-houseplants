@@ -39,12 +39,12 @@ const handleButton = () => {
       <img class="hero__img" src="/assets/hero-illustration.svg" alt="illustration of a horn" />
     </div>
     <div class="hero__logos">
-      <img class="logos__item" src="/assets/logos/logo0.png" alt="amazon logo" />
-      <img class="logos__item" src="/assets/logos/logo1.png" alt="dribble logo" />
-      <img class="logos__item" src="/assets/logos/logo2.png" alt="hubspot logo" />
-      <img class="logos__item" src="/assets/logos/logo3.png" alt="notion logo" />
-      <img class="logos__item" src="/assets/logos/logo4.png" alt="netflix logo" />
-      <img class="logos__item" src="/assets/logos/logo5.png" alt="zoom logo" />
+      <img class="logos__item" src="/assets/logos/amazon-logo.png" alt="amazon logo" />
+      <img class="logos__item" src="/assets/logos/dribbble-logo.png" alt="dribbble logo" />
+      <img class="logos__item" src="/assets/logos/hubspot-logo.png" alt="hubspot logo" />
+      <img class="logos__item" src="/assets/logos/notion-logo.png" alt="notion logo" />
+      <img class="logos__item" src="/assets/logos/netflix-logo.png" alt="netflix logo" />
+      <img class="logos__item" src="/assets/logos/zoom-logo.png" alt="zoom logo" />
     </div>
   </section>
 </template>
