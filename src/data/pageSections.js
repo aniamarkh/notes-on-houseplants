@@ -26,13 +26,13 @@ const pageSectionsData = [
       'Meet the skilled and experienced team behind our successful digital marketing strategies',
     component: 'TeamCardsList',
   },
-  // {
-  //   name: 'testimonials',
-  //   heading: 'Testimonials',
-  //   subheading:
-  //     'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services',
-  //   component: 'SwitcherComponent',
-  // },
+  {
+    name: 'testimonials',
+    heading: 'Testimonials',
+    subheading:
+      'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services',
+    component: 'SwitcherComponent',
+  },
 ];
 
 export default pageSectionsData;

@@ -45,12 +45,36 @@ defineProps({
   }
 }
 
+.services__title {
+  max-width: 800px !important;
+}
+
+.case-studies__title {
+  max-width: 850px !important;
+}
+
+.process__title {
+  max-width: 750px !important;
+  margin: 140px 0 70px !important;
+}
+
+.team__title {
+  max-width: 650px !important;
+  margin: 130px 0 80px !important;
+}
+
+.testimonials__title {
+  margin-top: 100px !important;
+  max-width: 780px !important;
+}
+
 @media (max-width: 900px) {
   .section-title {
     display: block;
     margin: 60px auto 40px;
     height: auto;
     padding: 0 20px;
+
     &__heading {
       font-size: 36px;
       line-height: 46px;
@@ -66,6 +90,32 @@ defineProps({
       line-height: 24px;
       margin-top: 30px;
     }
+  }
+
+  .services__title {
+    margin: 30px auto 40px !important;
+  }
+
+  .case-studies__title {
+    margin: 60px auto 20px !important;
+  }
+
+  .process__title {
+    margin: 60px auto 30px !important;
+
+    .section-title__heading {
+      width: 230px !important;
+      text-align: center;
+      white-space: normal;
+    }
+  }
+
+  .team__title {
+    margin: 60px auto 5px !important;
+  }
+
+  .testimonials__title {
+    margin: 56px auto 40px !important;
   }
 }
 </style>

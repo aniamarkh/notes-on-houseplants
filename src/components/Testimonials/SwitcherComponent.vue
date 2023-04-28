@@ -202,7 +202,6 @@ const isBtnDisabled = (btn) => {
 
 @media (max-width: 900px) {
   .testimonials__switcher {
-    width: 100%;
     height: 554px;
     padding: 30px 0 68px;
   }
@@ -213,6 +212,12 @@ const isBtnDisabled = (btn) => {
   .switcher__pagination {
     width: 330px;
     gap: 70px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .testimonials__switcher {
+    width: 100%;
   }
 }
 </style>
