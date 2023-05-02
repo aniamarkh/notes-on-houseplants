@@ -87,9 +87,8 @@ const toggleCards = () => {
   .team__button {
     margin-left: 0;
     margin: 0 auto;
-    .button--black {
-      padding: 20px 135px !important;
-    }
+    max-width: 390px;
+    width: 100% !important;
   }
 }
 

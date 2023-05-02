@@ -155,12 +155,13 @@ const toggleCard = () => {
     }
 
     .card__title {
-      width: 300px;
+      width: 100%;
     }
 
     .card__button {
       background-size: 30px;
-      width: 30px;
+      background-repeat: no-repeat;
+      width: 34px;
       height: 30px;
     }
   }
@@ -175,12 +176,13 @@ const toggleCard = () => {
     }
 
     .card__title {
-      width: 300px;
+      width: 100%;
     }
 
     .card__top .card__button {
       background-size: 30px;
-      width: 30px;
+      background-repeat: no-repeat;
+      width: 34px;
       height: 30px;
     }
   }

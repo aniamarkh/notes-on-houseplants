@@ -187,12 +187,12 @@ onUnmounted(() => {
     align-items: flex-start;
     position: absolute;
     background-color: $bg-color;
-    width: 80%;
+    width: 100%;
     height: 100vh;
     top: 0;
     right: -900px;
     opacity: 0;
-    padding: 50px 30px;
+    padding: 100px 30px;
     gap: 40px;
     @include transition-ease;
 
@@ -235,6 +235,7 @@ onUnmounted(() => {
 
     &__logo {
       width: 144px;
+      z-index: 4;
     }
 
     &--fixed {

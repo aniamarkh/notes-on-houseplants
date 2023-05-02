@@ -23,7 +23,9 @@ import cardsData from '../../data/servicesCards';
         Contact us today to learn more about how our digital marketing services can help your
         business grow and succeed online.
       </p>
-      <ButtonComponent color="black">Get your free proposal</ButtonComponent>
+      <ButtonComponent class="proposal-card__button" color="black">
+        Get your free proposal
+      </ButtonComponent>
     </div>
     <img
       class="proposal-card__img"
@@ -92,15 +94,20 @@ import cardsData from '../../data/servicesCards';
   .services__proposal-card {
     margin: 70px auto 0;
     padding: 50px;
-    width: 390px;
-    height: 370px;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
 
     .proposal-card__img {
       display: none;
     }
 
+    .proposal-card__button {
+      width: 100%;
+    }
+
     .proposal-card__text {
-      height: 270px;
+      height: auto;
 
       .text__title {
         font-size: 26px;
@@ -111,6 +118,7 @@ import cardsData from '../../data/servicesCards';
         font-size: 16px;
         line-height: 24px;
         margin: 20px 0;
+        width: 100%;
       }
     }
   }

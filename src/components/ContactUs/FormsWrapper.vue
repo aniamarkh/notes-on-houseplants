@@ -168,6 +168,14 @@ const handleChange = (event) => {
   }
 }
 
+@media (max-width: 429px) {
+  .contact-us {
+    &__switcher {
+      gap: 10px;
+    }
+  }
+}
+
 @media (min-width: 701px) and (max-width: 1439px) {
   .contact-us {
     width: 100%;

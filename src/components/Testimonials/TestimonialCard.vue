@@ -65,7 +65,7 @@ defineProps({
 
   .card__paragraph {
     min-height: 330px;
-    background: url('src/assets/bubble-mobile.png');
+    background: url('/assets/bubble-mobile.png');
     background-repeat: no-repeat;
     font-size: 16px;
     line-height: 24px;

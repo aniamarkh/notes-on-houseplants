@@ -103,6 +103,7 @@ const openLink = () => {
 
 @media (max-width: 900px) {
   .team-card {
+    max-width: 387px;
     min-height: auto;
     padding: 38px 50px;
   }
@@ -125,12 +126,27 @@ const openLink = () => {
   }
 
   .card__separator {
-    width: auto;
+    width: 100%;
     margin: 20px 0;
   }
 
   .card__icon {
     right: 47px;
+  }
+}
+
+@media (max-width: 429px) {
+  .team-card {
+    width: 335px;
+    padding: 25px 50px;
+  }
+  .card__member-info {
+    .member-info__name {
+      margin-bottom: 0;
+    }
+  }
+  .card__icon {
+    top: 20px;
   }
 }
 </style>

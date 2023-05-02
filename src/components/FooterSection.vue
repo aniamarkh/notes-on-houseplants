@@ -37,7 +37,7 @@ const scrollUp = () => {
     <div class="footer__separator"></div>
     <div class="footer__rights">
       <a class="rights__item" target="_blank" href="https://github.com/aniamarkh/positivus-landing">
-        <img class="item__icon" src="src/assets/footer/github-mark-white.png" alt="github icon" />
+        <img class="item__icon" src="/assets/footer/github-mark-white.png" alt="github icon" />
         Anna Marchenko @aniamarkh, 2023
       </a>
       <a
@@ -127,17 +127,17 @@ const scrollUp = () => {
 
   &--linkedin {
     @extend .social__item;
-    background: url('src/assets/footer/in-icon.png');
+    background: url('/assets/footer/in-icon.png');
   }
 
   &--facebook {
     @extend .social__item;
-    background: url('src/assets/footer/faceb-icon.png');
+    background: url('/assets/footer/faceb-icon.png');
   }
 
   &--twitter {
     @extend .social__item;
-    background: url('src/assets/footer/tw-icon.png');
+    background: url('/assets/footer/tw-icon.png');
   }
 }
 
@@ -297,6 +297,15 @@ const scrollUp = () => {
   .rights__item {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 429px) {
+  .contacts {
+    &__sub {
+      @include flex-column;
+      width: 100%;
+    }
   }
 }
 </style>
