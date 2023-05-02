@@ -2,8 +2,7 @@
 This repository contains a responsive page layout implementation for the hypothetical Pozitivus company, using Vue 3, Vite, and SCSS. The objective of this project is to provide a precise, responsive layout that adapts to various screen resolutions, including mobile devices.
 ## Live Demo
 A deployed version of the project can be found at the following link:
-
-[Live Demo](https://www.figma.com/community/file/1230604708032389430)
+[Live Demo](https://aniamarkh-positivus.onrender.com/)
 
 ## Features
 - Developed with Vue 3, Vite, and SCSS
