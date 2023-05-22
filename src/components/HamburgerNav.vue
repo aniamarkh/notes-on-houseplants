@@ -13,7 +13,7 @@ const buttonClass = computed(() => {
 </script>
 
 <template>
-  <button :class="buttonClass">
+  <button :class="buttonClass" aria-label="navigation menu">
     <div class="burger__icon"></div>
   </button>
 </template>

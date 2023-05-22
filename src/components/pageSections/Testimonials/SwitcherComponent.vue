@@ -74,6 +74,7 @@ const isBtnDisabled = (btn) => {
         ref="btnPrev"
         :disabled="isBtnDisabled('prev')"
         class="pagination__button-prev"
+        aria-label="previous testimonial"
         @click="prev"
       ></button>
       <ul class="pagination__list">
@@ -88,6 +89,7 @@ const isBtnDisabled = (btn) => {
         ref="btnNext"
         :disabled="isBtnDisabled('next')"
         class="pagination__button-next"
+        aria-label="next testimonial"
         @click="next"
       ></button>
     </div>

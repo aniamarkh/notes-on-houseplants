@@ -30,12 +30,17 @@ const openLink = () => {
 <template>
   <div class="team-card">
     <div class="card__icon" @click="openLink">
-      <a ref="linkRef" href="https://www.linkedin.com/" target="_blank"></a>
+      <a
+        ref="linkRef"
+        href="https://www.linkedin.com/"
+        target="_blank"
+        :aria-label="name + ' linkedin page'"
+      ></a>
     </div>
     <div class="card__top">
       <img class="card__img" :alt="name + ' photo'" :src="img" />
       <div class="card__member-info">
-        <h4 class="member-info__name">{{ name }}</h4>
+        <p class="member-info__name">{{ name }}</p>
         <p class="member-info__role">{{ role }}</p>
       </div>
     </div>
@@ -70,6 +75,9 @@ const openLink = () => {
   @include flex-column;
   font-size: 20px;
 
+  .member-info__name {
+    font-weight: bold;
+  }
   .member-info__role {
     font-size: 18px;
   }

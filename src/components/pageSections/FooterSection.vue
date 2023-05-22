@@ -10,16 +10,27 @@ const scrollUp = () => {
 <template>
   <footer class="footer">
     <div class="footer__links">
-      <img class="links__logo" src="/assets/footer/logo-white.png" @click="scrollUp" />
+      <img
+        class="links__logo"
+        alt="positivus"
+        src="/assets/footer/logo-white.png"
+        @click="scrollUp"
+      />
       <ul class="links__sections">
         <li v-for="(item, index) of pageNavItems" :key="index" class="sections__item">
           <a :href="item.href">{{ item.title }}</a>
         </li>
       </ul>
       <ul class="links__social">
-        <li class="social__item--linkedin"></li>
-        <li class="social__item--facebook"></li>
-        <li class="social__item--twitter"></li>
+        <li class="social__item--linkedin">
+          <a aria-label="linkedin" href="https://www.linkedin.com/"></a>
+        </li>
+        <li class="social__item--facebook">
+          <a aria-label="facebook" href="https://www.facebook.com/"></a>
+        </li>
+        <li class="social__item--twitter">
+          <a aria-label="twitter" href="https://twitter.com/"></a>
+        </li>
       </ul>
     </div>
     <div class="footer__contacts">
@@ -30,14 +41,14 @@ const scrollUp = () => {
         <p class="info__paragraph">Address: 1234 Main St Moonstone City, Stardust State 12345</p>
       </div>
       <div class="contacts__sub">
-        <input class="sub__input" type="email" placeholder="Email" />
+        <input class="sub__input" type="email" placeholder="Email" aria-label="Email" />
         <Button class="sub__button" color="green">Subscribe to news</Button>
       </div>
     </div>
     <div class="footer__separator"></div>
     <div class="footer__rights">
       <a class="rights__item" target="_blank" href="https://github.com/aniamarkh/positivus-landing">
-        <img class="item__icon" src="/assets/footer/github-mark-white.png" alt="github icon" />
+        <img alt="GitHub icon" class="item__icon" src="/assets/footer/github-mark-white.png" />
         Anna Marchenko @aniamarkh, 2023
       </a>
       <a
@@ -55,7 +66,6 @@ const scrollUp = () => {
 @import '../../_config.scss';
 
 .footer {
-  margin-top: 140px;
   @include flex-column;
   align-items: flex-start;
   padding: 55px 60px 50px;
@@ -64,6 +74,7 @@ const scrollUp = () => {
   color: $bg-color;
   background: $dark;
   border-radius: 45px 45px 0px 0px;
+  margin: 140px auto 0;
 
   &__links {
     @include flex-row;

@@ -37,13 +37,13 @@ const toggleCard = () => {
   <div :class="cardClass">
     <div class="card__top">
       <h3 class="card__title">
-        <h1 class="card__number">{{ cardNumber }}</h1>
+        <p class="card__number">{{ cardNumber }}</p>
         {{ title }}
       </h3>
-      <div class="card__button" @click="toggleCard"></div>
+      <button class="card__button" aria-label="process description" @click="toggleCard"></button>
     </div>
     <div class="card__bottom">
-      <div class="card__separator"></div>
+      <div class="card__separator" aria-hidden="true"></div>
       <p class="card__desc">{{ desc }}</p>
     </div>
   </div>
@@ -51,6 +51,10 @@ const toggleCard = () => {
 
 <style scoped lang="scss">
 @import '../../../_config.scss';
+button {
+  all: unset;
+  cursor: pointer;
+}
 
 .process_card {
   display: flex;

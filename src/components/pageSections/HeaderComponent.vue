@@ -48,23 +48,25 @@ onUnmounted(() => {
 
 <template>
   <header :class="isScrolled ? 'header--fixed' : 'header'">
-    <img alt="positivus" class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
-    <HamburgerNav :is-open="isOpenNav" class="header__burger" @click="toggleNav" />
-    <nav :class="navClass">
-      <ul class="nav__list">
-        <li
-          v-for="(item, index) of pageNavItems"
-          :key="index"
-          class="nav__item"
-          @click="if (navClass === 'header__nav header__nav--open') toggleNav();"
-        >
-          <a :href="item.href">{{ item.title }}</a>
-        </li>
-      </ul>
-      <Button class="header__button" color="white" @click="handleQuoteRequest">
-        <a ref="quoteLink" class="button__link" href="#contact-us">Request a quote</a>
-      </Button>
-    </nav>
+    <div class="header__wrapper">
+      <img alt="positivus" class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
+      <HamburgerNav :is-open="isOpenNav" class="header__burger" @click="toggleNav" />
+      <nav :class="navClass">
+        <ul class="nav__list">
+          <li
+            v-for="(item, index) of pageNavItems"
+            :key="index"
+            class="nav__item"
+            @click="if (navClass === 'header__nav header__nav--open') toggleNav();"
+          >
+            <a :href="item.href">{{ item.title }}</a>
+          </li>
+        </ul>
+        <Button class="header__button" color="white" @click="handleQuoteRequest">
+          <a ref="quoteLink" class="button__link" href="#contact-us">Request a quote</a>
+        </Button>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -73,16 +75,24 @@ onUnmounted(() => {
 
 .header {
   z-index: 2;
-  position: sticky;
+  position: fixed;
   top: 0;
-  height: 135px;
-  width: 1240px;
-  padding: 55px 0 0;
-  @include flex-row;
-  justify-content: space-between;
+  left: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 135px;
+  width: 100%;
+  padding: 55px 0 0;
   background-color: $bg-color;
   transition: all 0.3s ease-in-out;
+
+  &__wrapper {
+    width: 1240px;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__logo {
     cursor: pointer;
