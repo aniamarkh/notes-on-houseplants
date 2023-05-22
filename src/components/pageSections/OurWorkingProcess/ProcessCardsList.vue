@@ -1,6 +1,6 @@
 <script setup>
 import ProcessCard from './ProcessCard.vue';
-import processCardsData from '../../data/processCards';
+import processCardsData from '/src/data/processCards';
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import processCardsData from '../../data/processCards';
 </template>
 
 <style lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 
 .process__cards {
   padding: 10px 0;

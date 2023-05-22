@@ -50,7 +50,7 @@ const toggleCard = () => {
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 
 .process_card {
   display: flex;

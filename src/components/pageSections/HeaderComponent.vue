@@ -1,8 +1,8 @@
 <script setup>
 import { ref, computed, toRef, onMounted, onUnmounted } from 'vue';
-import Button from './ButtonComponent.vue';
-import HamburgerNav from './HamburgerNav.vue';
-import pageNavItems from '../data/pageNavItems.js';
+import Button from '../ButtonComponent.vue';
+import HamburgerNav from '../HamburgerNav.vue';
+import pageNavItems from '../../data/pageNavItems.js';
 defineProps({
   selectedOption: {
     type: String,
@@ -48,7 +48,7 @@ onUnmounted(() => {
 
 <template>
   <header :class="isScrolled ? 'header--fixed' : 'header'">
-    <img class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
+    <img alt="positivus" class="header__logo" src="/assets/Logo.svg" @click="scrollUp" />
     <HamburgerNav :is-open="isOpenNav" class="header__burger" @click="toggleNav" />
     <nav :class="navClass">
       <ul class="nav__list">
@@ -69,11 +69,11 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import '../_config.scss';
+@import '../../_config.scss';
 
 .header {
   z-index: 2;
-  position: fixed;
+  position: sticky;
   top: 0;
   height: 135px;
   width: 1240px;

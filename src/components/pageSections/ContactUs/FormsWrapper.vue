@@ -1,6 +1,6 @@
 <script setup>
 import Form from './DynamicForm.vue';
-import SectionTitle from '../SectionTitle.vue';
+import SectionTitle from '../../SectionTitle.vue';
 defineProps({
   selectedOption: {
     type: String,
@@ -57,7 +57,7 @@ const handleChange = (event) => {
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 
 .contact-us {
   &__wrapper {

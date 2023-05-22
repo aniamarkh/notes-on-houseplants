@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from 'vue';
-import Header from './HeaderComponent.vue';
-import Hero from './HeroComponent.vue';
-import SectionLayout from './SectionLayout.vue';
+import Header from './pageSections/HeaderComponent.vue';
+import Hero from './pageSections/HeroComponent.vue';
+import SectionLayout from './pageSections/SectionLayout.vue';
 import pageSectionsData from '../data/pageSections';
-import FormsWrapper from './ContactUs/FormsWrapper.vue';
-import FooterSection from './FooterSection.vue';
+import FormsWrapper from './pageSections/ContactUs/FormsWrapper.vue';
+import FooterSection from './pageSections/FooterSection.vue';
 const selectedOption = ref('sayHi');
 
 const updateSelectedOption = (value) => {

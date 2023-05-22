@@ -22,7 +22,7 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 
 .case-studies__cards {
   @include flex-row;
@@ -40,12 +40,13 @@ import CaseStudiesCard from './CaseStudiesCard.vue';
   background: $bg-color;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1439px) {
   .case-studies__cards {
     align-items: flex-start;
     background: none;
     width: auto;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: auto;
     padding: 0;
     gap: 20px;
     height: auto;

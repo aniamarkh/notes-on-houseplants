@@ -24,7 +24,7 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 .testimonial-card {
   width: 606px;
   height: 335px;

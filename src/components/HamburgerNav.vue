@@ -13,13 +13,19 @@ const buttonClass = computed(() => {
 </script>
 
 <template>
-  <div :class="buttonClass">
+  <button :class="buttonClass">
     <div class="burger__icon"></div>
-  </div>
+  </button>
 </template>
 
 <style scoped lang="scss">
 @import '../_config.scss';
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 @mixin burger-line {
   transition-duration: 0.5s;
   position: absolute;

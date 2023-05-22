@@ -1,5 +1,5 @@
 <script setup>
-import SectionTitle from './SectionTitle.vue';
+import SectionTitle from '../SectionTitle.vue';
 import ServicesCardsList from './Services/ServicesCardsList.vue';
 import CaseStudiesCardsList from './CaseStudies/CaseStudiesCardsList.vue';
 import ProcessCardsList from './OurWorkingProcess/ProcessCardsList.vue';
@@ -48,7 +48,7 @@ const components = {
 </template>
 
 <style lang="scss">
-@import '../_config.scss';
+@import '../../_config.scss';
 
 .section {
   @include flex-column;

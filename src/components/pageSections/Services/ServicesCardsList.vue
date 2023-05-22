@@ -1,7 +1,7 @@
 <script setup>
 import ServiceCard from './ServiceCard.vue';
-import ButtonComponent from '../ButtonComponent.vue';
-import cardsData from '../../data/servicesCards';
+import ButtonComponent from '../../ButtonComponent.vue';
+import cardsData from '/src/data/servicesCards';
 </script>
 
 <template>
@@ -36,7 +36,7 @@ import cardsData from '../../data/servicesCards';
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 .services__cards {
   @include flex-row;
   flex-wrap: wrap;

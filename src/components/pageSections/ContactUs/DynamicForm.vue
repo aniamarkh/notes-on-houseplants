@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue';
-import Button from '../ButtonComponent.vue';
+import Button from '../../ButtonComponent.vue';
 
 const props = defineProps({
   formType: {
@@ -43,7 +43,7 @@ const buttonText = computed(() =>
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 .button__text {
   text-align: center;
 }

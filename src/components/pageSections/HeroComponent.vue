@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import Button from './ButtonComponent.vue';
+import Button from '../ButtonComponent.vue';
 
 defineProps({
   selectedOption: {
@@ -26,7 +26,7 @@ const handleButton = () => {
         <img
           class="hero__img--mobile"
           src="/assets/hero-illustration.svg"
-          alt="illustration of a horn"
+          alt="Megaphone surrounded by various social media icons"
         />
         <p class="text-block__paragraph">
           Our digital marketing agency helps businesses grow and succeed online through a range of
@@ -50,7 +50,7 @@ const handleButton = () => {
 </template>
 
 <style scoped lang="scss">
-@import '../_config.scss';
+@import '../../_config.scss';
 .hero {
   width: 100%;
   @include flex-column;

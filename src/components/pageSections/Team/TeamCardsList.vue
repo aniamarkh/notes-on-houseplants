@@ -1,8 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue';
-import teamMembersCards from '../../data/teamMembersCards';
+import teamMembersCards from '/src/data/teamMembersCards';
 import TeamMemberCard from './TeamMemberCard.vue';
-import ButtonComponent from '../ButtonComponent.vue';
+import ButtonComponent from '../../ButtonComponent.vue';
 
 const isCollapsed = ref(true);
 const cardsListClass = computed(() => {
@@ -35,7 +35,7 @@ const toggleCards = () => {
 </template>
 
 <style lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 
 .team__cards {
   width: 100%;

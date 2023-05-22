@@ -45,7 +45,7 @@ const openLink = () => {
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 .team-card {
   position: relative;
   display: flex;

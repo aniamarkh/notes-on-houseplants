@@ -1,5 +1,5 @@
 <script setup>
-import LinkComponent from '../LinkComponent.vue';
+import LinkComponent from '../../LinkComponent.vue';
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import LinkComponent from '../LinkComponent.vue';
 </template>
 
 <style scoped lang="scss">
-@import '../../_config.scss';
+@import '../../../_config.scss';
 .case-card {
   width: 300px;
   @include flex-column;
@@ -32,7 +32,7 @@ import LinkComponent from '../LinkComponent.vue';
   width: 155px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1439px) {
   .case-card {
     width: 350px;
     height: 250px;

@@ -1,6 +1,6 @@
 <script setup>
-import Button from './ButtonComponent.vue';
-import pageNavItems from '../data/pageNavItems.js';
+import Button from '../ButtonComponent.vue';
+import pageNavItems from '../../data/pageNavItems.js';
 
 const scrollUp = () => {
   window.scrollTo(0, 0);
@@ -10,7 +10,7 @@ const scrollUp = () => {
 <template>
   <footer class="footer">
     <div class="footer__links">
-      <img class="links__logo" src="../assets/footer/logo-white.png" @click="scrollUp" />
+      <img class="links__logo" src="/assets/footer/logo-white.png" @click="scrollUp" />
       <ul class="links__sections">
         <li v-for="(item, index) of pageNavItems" :key="index" class="sections__item">
           <a :href="item.href">{{ item.title }}</a>
@@ -52,7 +52,7 @@ const scrollUp = () => {
 </template>
 
 <style scoped lang="scss">
-@import '../_config.scss';
+@import '../../_config.scss';
 
 .footer {
   margin-top: 140px;
