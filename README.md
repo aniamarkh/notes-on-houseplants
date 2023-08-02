@@ -1,6 +1,6 @@
-# Pozitivus - Vue 3 Responsive Page Layout
+# Positivus - Vue 3 Responsive Page Layout
 
-This repository contains a responsive page layout implementation for the hypothetical Pozitivus company, using Vue 3, Vite, and SCSS. The objective of this project is to provide a precise, responsive layout that adapts to various screen resolutions, including mobile devices.
+This repository contains a responsive page layout implementation for the hypothetical Positivus company, using Vue 3, Vite, and SCSS. The objective of this project is to provide a precise, responsive layout that adapts to various screen resolutions, including mobile devices.
 
 ## Live Demo
 
