@@ -2,9 +2,7 @@
 
 This repository contains a responsive page layout implementation for the hypothetical Positivus company, using Vue 3, Vite, and SCSS. The objective of this project is to provide a precise, responsive layout that adapts to various screen resolutions, including mobile devices.
 
-## Live Demo
-
-Here is a [deployed version of the project.](https://positivus-landing-aniamarkh.vercel.app/)
+## [DEMO](https://positivus-landing-aniamarkh.vercel.app/)
 
 ## Features
 
